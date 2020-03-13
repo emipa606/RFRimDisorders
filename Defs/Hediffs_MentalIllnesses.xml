@@ -2,6 +2,7 @@
 <Defs>
 
 	<HediffDef Name="MentalIllnessBase" Abstract="True">
+		<description>no clue...</description>
 		<hediffClass>RimDisorders.MentalIllness</hediffClass>
 		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
 		<initialSeverity>0.15</initialSeverity>
@@ -11,6 +12,7 @@
 		<defName>Refractory</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>refractory period after break</label>
+		<description>no clue...</description>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>
@@ -33,6 +35,7 @@
 		<defName>Counseled</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>recently counseled</label>
+		<description>no clue...</description>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>

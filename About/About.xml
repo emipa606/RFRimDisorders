@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 
-	<name>[RF] Rim Disorders [1.0]</name>
+	<name>[RF] Rim Disorders [1.1]</name>
 	<author>Rainbeau Flambe</author>
-	<url>https://ludeon.com/forums/index.php?topic=46165</url>
-	<targetVersion>1.0.0</targetVersion>
-	<description>(Last update: 11/08/2018)
+	<url>https://github.com/firefoxpdm/Rainbeau-s-Rim-Disorders</url>
+	<supportedVersions>
+        <li>1.1</li>
+    </supportedVersions>
+	<description>(Last update: 2020-03-13)
+	
+Originally from https://ludeon.com/forums/index.php?topic=46165
 	
 "Rim Disorders," a mod originally created for RimWorld a17 by SeveralPuffins, introduces more misery, trauma, and poor mental health to your vibrant, lively colony! Pawns will develop, either randomly or due to trauma, new mental health disorders, which can only be cured slowly, through counseling. 
 

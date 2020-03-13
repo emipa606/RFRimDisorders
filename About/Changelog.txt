@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------
   Changelog for "Rainbeau's Rim Disorders"
 ---------------------------------------------------------------------------------
+- 2020-03-13
+    - Updated to 1.1
 
 - 11/08/2018
 	- Initial release by Rainbeau Flambe of "Rim Disorders" for RimWorld 1.0.

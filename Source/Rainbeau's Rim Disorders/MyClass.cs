@@ -95,8 +95,8 @@ namespace RimDisorders {
 
 	public class Alert_SudicideRisk : Alert_Critical {
 		public Alert_SudicideRisk() { }
-		public override string GetExplanation() {
-			return Translator.Translate("RRD.SuicideRiskDesc");
+		public override TaggedString GetExplanation() {
+			return new TaggedString(Translator.Translate("RRD.SuicideRiskDesc"));
 		}
 		public override string GetLabel() {
 			return Translator.Translate("RRD.SuicideRisk");
@@ -400,9 +400,6 @@ namespace RimDisorders {
 	}
 
 	public class IncidentWorker_GiveRandomMentalIllness : IncidentWorker {
-		public override float AdjustedChance {
-			get { return base.AdjustedChance; }
-		}
 		private HediffDef RandomMentalIllness {
 			get { return DiseaseDefOfRimDisorders.MajorDepression; }
 		}
@@ -880,7 +877,7 @@ namespace RimDisorders {
 				str = Translator.Translate("RRD.CounselAnxiety");
 			}
 			else if (this.recipe.defName != "CounselPTSD") {
-				str = (this.recipe.defName != "CounselCOCD" ? "" : Translator.Translate("RRD.CounselCOCD"));
+				str = (this.recipe.defName != "CounselCOCD" ? "" : Translator.Translate("RRD.CounselCOCD").ToString());
 			}
 			else {
 				str = Translator.Translate("RRD.CounselPTSD");
