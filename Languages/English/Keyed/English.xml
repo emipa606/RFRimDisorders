@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RRD.RimDisorders>Rainbeau's Rim Disorders</RRD.RimDisorders>
+
+	<RRD.Overview>The settings below determine the rate at which the mod's various mental illnesses will manifest, and how effective counseling will be. Setting any of the illness rates to 0% will prevent those illnesses from manifesting at all. 100% is the mod's default setting, though you can choose to have illnesses manifest more frequently if you want to give yourself a greater challenge.\n\nUsers of SeveralPuffins' original a17 version of the mod should note that the default rate (100%) for each illness is actually just a quarter of the default manifestation rate for that illness in the a17 version. This change was made since users of the mod's original version seemed to universally agree that all of the illnesses manifested too often. For similar reasons, the default effectiveness (100%) of counseling is actually twice the a17 default.</RRD.Overview>
+
+	<RRD.AnxietyChance>Rate at Which Generalized Anxiety will Manifest:</RRD.AnxietyChance>
+	<RRD.COCDChance>Rate at Which Cleanliness-OCD will Manifest:</RRD.COCDChance>
+	<RRD.DepressionChance>Rate at Which Depression will Manifest:</RRD.DepressionChance>
+	<RRD.PTSDChance>Rate at Which PTSD will Manifest:</RRD.PTSDChance>
+	
+	<RRD.CounselingEffectiveness>Effectiveness of Counseling:</RRD.CounselingEffectiveness>
+	
+	<RRD.CounselAnxiety>Counsel Anxiety</RRD.CounselAnxiety>
+	<RRD.CounselCOCD>Counsel Cleanliness OCD</RRD.CounselCOCD>
+	<RRD.CounselDepression>Counsel Depression</RRD.CounselDepression>
+	<RRD.CounselPTSD>Counsel PTSD</RRD.CounselPTSD>
+	<RRD.Improvement>Improvement</RRD.Improvement>
+	<RRD.CuredText>has been cured of a mental illness</RRD.CuredText>
+
+	<RRD.SuicideRisk>Suicide Risk</RRD.SuicideRisk>
+	<RRD.SuicideRiskDesc>One of your colonists is a suicide risk</RRD.SuicideRiskDesc>
+
+	<RRD.StressFlashback>Stressful situation caused flashback.</RRD.StressFlashback>
+	<RRD.RandomFlashback>Random flashback.</RRD.RandomFlashback>
+	
+	<RRD.Anxiety>Anxiety</RRD.Anxiety>
+	<RRD.COCD>c-OCD</RRD.COCD>
+	<RRD.Depression>Depression</RRD.Depression>
+	<RRD.PTSD>PTSD</RRD.PTSD>
+	
+	<RRD.DevelopedGAD>has developed generalized anxiety disorder</RRD.DevelopedGAD>
+	<RRD.DevelopedCOCD>has developed a cleanliness OCD</RRD.DevelopedCOCD>
+	<RRD.DevelopedDepression>has developed depression</RRD.DevelopedDepression>
+	<RRD.DevelopedPTSD>has developed PTSD</RRD.DevelopedPTSD>
+
+	<RRD.StressF> due to the extreme stresses of her situation.</RRD.StressF>
+	<RRD.StressM> due to the extreme stresses of his situation.</RRD.StressM>
+	<RRD.StimAbuse> due in part to stimulant abuse.</RRD.StimAbuse>
+	<RRD.DepressantAddiction> due in part to depressant addiction.</RRD.DepressantAddiction>
+	<RRD.AfterSick> after getting becoming seriously ill.</RRD.AfterSick>
+	<RRD.AfterDowned> after being downed.</RRD.AfterDowned>
+	<RRD.WitnessedTraumaticDeath> after the trauma of seeing someone killed.</RRD.WitnessedTraumaticDeath>
+	<RRD.WitnessedDeathF> after dwelling on a death she witnessed.</RRD.WitnessedDeathF>
+	<RRD.WitnessedDeathM> after dwelling on a death he witnessed.</RRD.WitnessedDeathM>
+	<RRD.SeenCorpse> after seeing a corpse.</RRD.SeenCorpse>
+	<RRD.GrossMortality> after seeing a rotting corpse.</RRD.GrossMortality>
+	
+</LanguageData>

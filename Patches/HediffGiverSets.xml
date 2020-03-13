@@ -1,0 +1,39 @@
+<Patch>
+ 
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>
+		<value>
+			<li Class="HediffGiver_Birthday">
+				<hediff>ADHD</hediff>
+				<partsToAffect>
+					<li>Brain</li>
+				</partsToAffect>
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0.03, 0.0029)</li>
+						<li>(0.15, 0.0029)</li>
+						<li>(0.25, 0.0)</li>
+						<li>(1.0,  0.0)</li>
+					</points>
+				</ageFractionChanceCurve>
+				<averageSeverityPerDayBeforeGeneration>0.00001</averageSeverityPerDayBeforeGeneration>
+			</li>
+			<li Class="HediffGiver_Birthday">
+				<hediff>Autism</hediff>
+				<partsToAffect>
+					<li>Brain</li>
+				</partsToAffect>
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0.03, 0.0026)</li>
+						<li>(0.15, 0.0026)</li>
+						<li>(0.25, 0.0)</li>
+						<li>(1.0,  0.0)</li>
+					</points>
+				</ageFractionChanceCurve>
+				<averageSeverityPerDayBeforeGeneration>0.00001</averageSeverityPerDayBeforeGeneration>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>
