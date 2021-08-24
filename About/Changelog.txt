@@ -1,18 +1,4 @@
----------------------------------------------------------------------------------
-  Changelog for "Rainbeau's Rim Disorders"
----------------------------------------------------------------------------------
-- 2020-03-13
-    - Updated to 1.1
+# Changelog for RFRimDisorders
 
-- 11/08/2018
-	- Initial release by Rainbeau Flambe of "Rim Disorders" for RimWorld 1.0.
-	- Default "manifestation rates" of disorders is 25% of a17's rates.
+1.0.1.0 - Republish, old files messing things up
 
-- 06/13/2017
-	- Final update to the mod by SeveralPuffins.
-	  
-- 05/29/2017
-	- Mod updated for alpha 17.
-
-- 01/03/2017
-	- Initial release of SeveralPuffins' "Rim Disorders" for RimWorld alpha 16.

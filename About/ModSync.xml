@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModSyncNinjaData>
-  <ID>772bc542-ec0e-4792-9ad6-030feb214ab4</ID>
-  <ModName>[RF] Rim Disorders</ModName>
-  <Version>1.0.2.0</Version>
+  <ID>eb745a27-444c-4a0e-97c1-de83f16e7d72</ID>
+  <ModName>[RF] Rim Disorders (Continued)</ModName>
+  <Version>1.0.1.0</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
-    <Owner>firefoxpdm</Owner>
-    <Project>Rainbeau-s-Rim-Disorders</Project>
+    <Owner>emipa606</Owner>
+    <Project>RFRimDisorders</Project>
     <AboutDir>About</AboutDir>
-    <DownloadFrom>ModSyncReleases</DownloadFrom>
+    <DownloadFrom>ModSyncMainPage</DownloadFrom>
     <Branch>master</Branch>
   </Host>
 </ModSyncNinjaData>
+
+
+
+
+
