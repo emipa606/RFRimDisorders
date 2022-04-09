@@ -1,6 +1,6 @@
 # RFRimDisorders
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of SeveralPuffins mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=833388914
@@ -9,19 +9,10 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1560113539
 and firefoxpdms 1.1 version
 https://github.com/firefoxpdm/Rainbeau-s-Rim-Disorders
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/RFRimDisorders]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 **"Rim Disorders," a mod originally created for RimWorld a17 by SeveralPuffins, introduces more misery, trauma, and poor mental health to your vibrant, lively colony! Pawns will develop, either randomly or due to trauma, new mental health disorders, which can only be cured slowly, through counseling. 
@@ -78,7 +69,7 @@ The Ludeon forums discussion thread for my mods can be found https://ludeon.com/
 
 If you have any (helpful) suggestions for improvement, please let me know!
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
@@ -88,7 +79,6 @@ If you have any (helpful) suggestions for improvement, please let me know!
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
-
 
 
 

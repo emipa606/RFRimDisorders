@@ -2,38 +2,37 @@
 using Verse;
 using Verse.AI;
 
-namespace RimDisorders
+namespace RimDisorders;
+
+public class MentalState_COCDCleaning : MentalState
 {
-    public class MentalState_COCDCleaning : MentalState
+    public override void MentalStateTick()
     {
-        public override void MentalStateTick()
+        if (pawn.jobs.curJob.def != JobDefOf.Clean)
         {
-            if (pawn.jobs.curJob.def != JobDefOf.Clean)
+            var filthInHomeArea = pawn.Map.listerFilthInHomeArea.FilthInHomeArea;
+            if (filthInHomeArea.Count != 0)
             {
-                var filthInHomeArea = pawn.Map.listerFilthInHomeArea.FilthInHomeArea;
-                if (filthInHomeArea.Count != 0)
-                {
-                    var thing = filthInHomeArea.RandomElement();
-                    pawn.jobs.StartJob(new Job(JobDefOf.Clean, thing), JobCondition.InterruptForced);
-                }
-                else
-                {
-                    pawn.jobs.StartJob(new Job(JobDefOf.Wait, pawn.Position), JobCondition.InterruptForced);
-                }
+                var thing = filthInHomeArea.RandomElement();
+                pawn.jobs.StartJob(new Job(JobDefOf.Clean, thing), JobCondition.InterruptForced);
             }
-
-            base.MentalStateTick();
+            else
+            {
+                pawn.jobs.StartJob(new Job(JobDefOf.Wait, pawn.Position), JobCondition.InterruptForced);
+            }
         }
 
-        public override void PostEnd()
-        {
-            base.PostEnd();
-            pawn.health.AddHediff(DiseaseDefOfRimDisorders.Refractory);
-        }
+        base.MentalStateTick();
+    }
 
-        public override RandomSocialMode SocialModeMax()
-        {
-            return 0;
-        }
+    public override void PostEnd()
+    {
+        base.PostEnd();
+        pawn.health.AddHediff(DiseaseDefOfRimDisorders.Refractory);
+    }
+
+    public override RandomSocialMode SocialModeMax()
+    {
+        return 0;
     }
 }

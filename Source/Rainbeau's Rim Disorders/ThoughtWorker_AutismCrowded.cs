@@ -1,71 +1,70 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace RimDisorders
+namespace RimDisorders;
+
+public class ThoughtWorker_AutismCrowded : ThoughtWorker
 {
-    public class ThoughtWorker_AutismCrowded : ThoughtWorker
+    protected override ThoughtState CurrentStateInternal(Pawn p)
     {
-        protected override ThoughtState CurrentStateInternal(Pawn p)
+        ThoughtState inactive;
+        if (p.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.Autism))
         {
-            ThoughtState inactive;
-            if (p.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.Autism))
+            var firstHediffOfDef =
+                (MentalIllness)p.health.hediffSet.GetFirstHediffOfDef(DiseaseDefOfRimDisorders.Autism);
+            var curStageIndex = firstHediffOfDef.CurStageIndex;
+            if (curStageIndex < 1)
             {
-                var firstHediffOfDef =
-                    (MentalIllness)p.health.hediffSet.GetFirstHediffOfDef(DiseaseDefOfRimDisorders.Autism);
-                var curStageIndex = firstHediffOfDef.CurStageIndex;
-                if (curStageIndex < 1)
+                inactive = ThoughtState.Inactive;
+            }
+            else if (p.GetRoom(RegionType.Set_Passable) != null)
+            {
+                var num = 0;
+                foreach (var allPawnsSpawned in p.Map.mapPawns.AllPawnsSpawned)
                 {
-                    inactive = ThoughtState.Inactive;
+                    if (!allPawnsSpawned.Awake() || !allPawnsSpawned.RaceProps.Humanlike ||
+                        allPawnsSpawned.GetRoom(RegionType.Set_Passable) != p.GetRoom(RegionType.Set_Passable))
+                    {
+                        continue;
+                    }
+
+                    if (allPawnsSpawned.Position.InHorDistOf(p.Position, 10f))
+                    {
+                        num++;
+                    }
                 }
-                else if (p.GetRoom(RegionType.Set_Passable) != null)
+
+                if (curStageIndex == 1 && num > 9)
                 {
-                    var num = 0;
-                    foreach (var allPawnsSpawned in p.Map.mapPawns.AllPawnsSpawned)
+                    inactive = ThoughtState.ActiveAtStage(0);
+                }
+                else if (curStageIndex != 2 || num <= 5)
+                {
+                    if (curStageIndex == 3 && num > 4)
                     {
-                        if (!allPawnsSpawned.Awake() || !allPawnsSpawned.RaceProps.Humanlike ||
-                            allPawnsSpawned.GetRoom(RegionType.Set_Passable) != p.GetRoom(RegionType.Set_Passable))
-                        {
-                            continue;
-                        }
-
-                        if (allPawnsSpawned.Position.InHorDistOf(p.Position, 10f))
-                        {
-                            num++;
-                        }
-                    }
-
-                    if (curStageIndex == 1 && num > 9)
-                    {
-                        inactive = ThoughtState.ActiveAtStage(0);
-                    }
-                    else if (curStageIndex != 2 || num <= 5)
-                    {
-                        if (curStageIndex == 3 && num > 4)
-                        {
-                            inactive = ThoughtState.ActiveAtStage(2);
-                            return inactive;
-                        }
-
-                        inactive = ThoughtState.Inactive;
+                        inactive = ThoughtState.ActiveAtStage(2);
                         return inactive;
                     }
-                    else
-                    {
-                        inactive = ThoughtState.ActiveAtStage(1);
-                    }
+
+                    inactive = ThoughtState.Inactive;
+                    return inactive;
                 }
                 else
                 {
-                    inactive = ThoughtState.Inactive;
+                    inactive = ThoughtState.ActiveAtStage(1);
                 }
             }
             else
             {
                 inactive = ThoughtState.Inactive;
-                return inactive;
             }
-
+        }
+        else
+        {
+            inactive = ThoughtState.Inactive;
             return inactive;
         }
+
+        return inactive;
     }
 }

@@ -3,46 +3,45 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace RimDisorders
+namespace RimDisorders;
+
+public class IncidentWorker_GiveRandomMentalIllness : IncidentWorker
 {
-    public class IncidentWorker_GiveRandomMentalIllness : IncidentWorker
+    private HediffDef RandomMentalIllness => DiseaseDefOfRimDisorders.MajorDepression;
+
+    protected override bool CanFireNowSub(IncidentParms parms)
     {
-        private HediffDef RandomMentalIllness => DiseaseDefOfRimDisorders.MajorDepression;
+        return true;
+    }
 
-        protected override bool CanFireNowSub(IncidentParms parms)
+    protected override bool TryExecuteWorker(IncidentParms parms)
+    {
+        var map = (Map)parms.target;
+        var list = map.mapPawns.FreeColonistsAndPrisoners.ToList();
+        if (list.Count == 0)
         {
-            return true;
+            return false;
         }
 
-        protected override bool TryExecuteWorker(IncidentParms parms)
+        list.Shuffle();
+        var hediffDefs = new List<HediffDef>
         {
-            var map = (Map)parms.target;
-            var list = map.mapPawns.FreeColonistsAndPrisoners.ToList();
-            if (list.Count == 0)
-            {
-                return false;
-            }
-
-            list.Shuffle();
-            var hediffDefs = new List<HediffDef>
-            {
-                DiseaseDefOfRimDisorders.MajorDepression,
-                DiseaseDefOfRimDisorders.GeneralizedAnxiety,
-                DiseaseDefOfRimDisorders.COCD,
-                DiseaseDefOfRimDisorders.PTSD
-            };
-            if (hediffDefs.Count == 0)
-            {
-                return false;
-            }
-
-            if (Rand.Value >= 1f)
-            {
-                return false;
-            }
-
-            list[0].health.AddHediff(hediffDefs.RandomElement());
-            return true;
+            DiseaseDefOfRimDisorders.MajorDepression,
+            DiseaseDefOfRimDisorders.GeneralizedAnxiety,
+            DiseaseDefOfRimDisorders.COCD,
+            DiseaseDefOfRimDisorders.PTSD
+        };
+        if (hediffDefs.Count == 0)
+        {
+            return false;
         }
+
+        if (Rand.Value >= 1f)
+        {
+            return false;
+        }
+
+        list[0].health.AddHediff(hediffDefs.RandomElement());
+        return true;
     }
 }
