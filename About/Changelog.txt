@@ -1,5 +1,8 @@
 # Changelog for RFRimDisorders
 
+1.3.2 - Minor spell-fixes
+
+
 1.3.1 - Added patch for excluding babies from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2264291966]Age Matters[/url]
 
 

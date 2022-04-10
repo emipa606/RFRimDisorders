@@ -12,7 +12,7 @@
   <RRD.CounselDepression>Counsel Depression</RRD.CounselDepression>
   <RRD.CounselPTSD>Counsel PTSD</RRD.CounselPTSD>
   <RRD.Improvement>Improvement</RRD.Improvement>
-  <RRD.CuredText>has been cured of a mental illness</RRD.CuredText>
+  <RRD.CuredText> has been cured of a mental illness</RRD.CuredText>
   <RRD.SuicideRisk>Suicide Risk</RRD.SuicideRisk>
   <RRD.SuicideRiskDesc>One of your colonists is a suicide risk</RRD.SuicideRiskDesc>
   <RRD.StressFlashback>Stressful situation caused flashback.</RRD.StressFlashback>
@@ -21,10 +21,10 @@
   <RRD.COCD>c-OCD</RRD.COCD>
   <RRD.Depression>Depression</RRD.Depression>
   <RRD.PTSD>PTSD</RRD.PTSD>
-  <RRD.DevelopedGAD>has developed generalized anxiety disorder</RRD.DevelopedGAD>
-  <RRD.DevelopedCOCD>has developed a cleanliness OCD</RRD.DevelopedCOCD>
-  <RRD.DevelopedDepression>has developed depression</RRD.DevelopedDepression>
-  <RRD.DevelopedPTSD>has developed PTSD</RRD.DevelopedPTSD>
+  <RRD.DevelopedGAD> has developed generalized anxiety disorder</RRD.DevelopedGAD>
+  <RRD.DevelopedCOCD> has developed a cleanliness OCD</RRD.DevelopedCOCD>
+  <RRD.DevelopedDepression> has developed depression</RRD.DevelopedDepression>
+  <RRD.DevelopedPTSD> has developed PTSD</RRD.DevelopedPTSD>
   <RRD.StressF> due to the extreme stresses of her situation.</RRD.StressF>
   <RRD.StressM> due to the extreme stresses of his situation.</RRD.StressM>
   <RRD.StimAbuse> due in part to stimulant abuse.</RRD.StimAbuse>
