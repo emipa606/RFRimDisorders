@@ -1,5 +1,8 @@
 # Changelog for RFRimDisorders
 
+1.3.4 - Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1541438230]Children, school and learning[/url]
+
+
 1.3.3 - Should now also ignore any age below teenager in the Age Matters mod
 
 
