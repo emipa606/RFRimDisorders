@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Linq;
+using RimWorld;
 using Verse;
 using Verse.AI;
 
@@ -8,18 +9,29 @@ public class MentalState_COCDCleaning : MentalState
 {
     public override void MentalStateTick()
     {
-        if (pawn.jobs.curJob.def != JobDefOf.Clean)
+        if (pawn.jobs.curJob?.def == JobDefOf.Clean)
         {
-            var filthInHomeArea = pawn.Map.listerFilthInHomeArea.FilthInHomeArea;
-            if (filthInHomeArea.Count != 0)
+            base.MentalStateTick();
+            return;
+        }
+
+        var filthInHomeArea = pawn.Map.listerFilthInHomeArea?.FilthInHomeArea.Where(thing =>
+            pawn.CanReserveAndReach(thing, PathEndMode.ClosestTouch, Danger.Some));
+        if (filthInHomeArea?.Any() == true)
+        {
+            pawn.jobs.StartJob(new Job(JobDefOf.Clean, filthInHomeArea.RandomElement())
             {
-                var thing = filthInHomeArea.RandomElement();
-                pawn.jobs.StartJob(new Job(JobDefOf.Clean, thing), JobCondition.InterruptForced);
-            }
-            else
-            {
-                pawn.jobs.StartJob(new Job(JobDefOf.Wait, pawn.Position), JobCondition.InterruptForced);
-            }
+                locomotionUrgency = LocomotionUrgency.Sprint
+            }, JobCondition.InterruptForced);
+            base.MentalStateTick();
+            return;
+        }
+
+        if (pawn.jobs.curJob?.def != JobDefOf.GotoWander)
+        {
+            var randomLocation = RCellFinder.RandomWanderDestFor(pawn, pawn.Position, 7f, null,
+                PawnUtility.ResolveMaxDanger(pawn, Danger.Some));
+            pawn.jobs.StartJob(new Job(JobDefOf.GotoWander, randomLocation), JobCondition.InterruptForced);
         }
 
         base.MentalStateTick();
