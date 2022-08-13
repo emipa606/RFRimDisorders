@@ -7,6 +7,7 @@ public class Main
 {
     private static readonly bool ageMattersLoaded;
     private static readonly bool cslLoaded;
+    public static readonly bool mmLoaded;
     private static readonly HediffDef babyHediffDef;
     private static readonly HediffDef baby2HediffDef;
     private static readonly HediffDef toddlerHediffDef;
@@ -25,6 +26,7 @@ public class Main
             childHediffDef = HediffDef.Named("AgeMatters_child");
         }
 
+        mmLoaded = ModLister.GetActiveModWithIdentifier("Techmago.MoreMedications") != null;
         cslLoaded = ModLister.GetActiveModWithIdentifier("Dylan.CSL") != null;
         if (cslLoaded)
         {

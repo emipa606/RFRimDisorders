@@ -57,4 +57,28 @@ public class Hediff_Depression : MentalIllness
             .SuicideAttempt);
         pawn.health.AddHediff(DiseaseDefOfRimDisorders.Refractory);
     }
+
+    public override void Tick()
+    {
+        base.Tick();
+        if (!Main.mmLoaded)
+        {
+            return;
+        }
+
+        if (GenTicks.TicksAbs % GenTicks.TickRareInterval != 0)
+        {
+            return;
+        }
+
+        if (CurStageIndex == 0)
+        {
+            return;
+        }
+
+        if (pawn.health.hediffSet.HasHediff(HediffDef.Named("Soothingpills")))
+        {
+            Severity = 0.13f;
+        }
+    }
 }

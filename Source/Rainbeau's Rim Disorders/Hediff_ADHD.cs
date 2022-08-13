@@ -65,4 +65,28 @@ public class Hediff_ADHD : MentalIllness
 
         return job;
     }
+
+    public override void Tick()
+    {
+        base.Tick();
+        if (!Main.mmLoaded)
+        {
+            return;
+        }
+
+        if (GenTicks.TicksAbs % GenTicks.TickRareInterval != 0)
+        {
+            return;
+        }
+
+        if (CurStageIndex == 0)
+        {
+            return;
+        }
+
+        if (pawn.health.hediffSet.HasHediff(HediffDef.Named("AdhdMedication")))
+        {
+            Severity = 0.13f;
+        }
+    }
 }
