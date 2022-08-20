@@ -1,5 +1,8 @@
 # Changelog for RFRimDisorders
 
+1.3.7 - Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2559574784]Babies and Children[/url]
+
+
 1.3.6 - Now supports the ADHD and Antidepressants in [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1601812699]More Medications - Reborn[/url]
 
 

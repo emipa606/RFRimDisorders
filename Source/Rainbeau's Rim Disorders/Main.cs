@@ -8,11 +8,13 @@ public class Main
     private static readonly bool ageMattersLoaded;
     private static readonly bool cslLoaded;
     public static readonly bool mmLoaded;
+    public static readonly bool bcLoaded;
     private static readonly HediffDef babyHediffDef;
     private static readonly HediffDef baby2HediffDef;
     private static readonly HediffDef toddlerHediffDef;
     private static readonly HediffDef childHediffDef;
     private static readonly HediffDef birthHediffDef;
+    private static readonly HediffDef babyStateHediffDef;
 
     static Main()
     {
@@ -27,6 +29,12 @@ public class Main
         }
 
         mmLoaded = ModLister.GetActiveModWithIdentifier("Techmago.MoreMedications") != null;
+        bcLoaded = ModLister.GetActiveModWithIdentifier("babies.and.children.continued.13") != null;
+        if (bcLoaded)
+        {
+            babyStateHediffDef = HediffDef.Named("BabyState0");
+        }
+
         cslLoaded = ModLister.GetActiveModWithIdentifier("Dylan.CSL") != null;
         if (cslLoaded)
         {
@@ -63,6 +71,21 @@ public class Main
             {
                 return true;
             }
+        }
+
+        if (bcLoaded)
+        {
+            if (!pawn.health.hediffSet.HasHediff(babyStateHediffDef))
+            {
+                return false;
+            }
+
+            if (pawn.health.hediffSet.GetFirstHediffOfDef(babyStateHediffDef).CurStageIndex == 3)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         if (!cslLoaded)

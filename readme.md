@@ -9,10 +9,11 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1560113539
 and firefoxpdms 1.1 version
 https://github.com/firefoxpdm/Rainbeau-s-Rim-Disorders
 
+- Added patch for excluding babies from https://steamcommunity.com/sharedfiles/filedetails/?id=2264291966]Age Matters
+- Now supports the ADHD and Antidepressants in https://steamcommunity.com/sharedfiles/filedetails/?id=1601812699]More Medications - Reborn
+
 ![Image](https://i.imgur.com/pufA0kM.png)
 
-
-- Added patch for excluding babies from https://steamcommunity.com/sharedfiles/filedetails/?id=2264291966]Age Matters
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
