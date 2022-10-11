@@ -30,7 +30,7 @@ public abstract class MentalIllness : HediffWithComps
         var value = Rand.Value * (2f + (0.8f * social)) / 100f;
         value *= mult_counsel;
         var mentalIllness = this;
-        mentalIllness.Severity = mentalIllness.Severity - value;
+        mentalIllness.Severity -= value;
         hediffCompMentalIllness.Props.maxEpisodeStrength -= value;
         var position = pawn.Position;
         MoteMaker.ThrowText(position.ToVector3(), pawn.Map,
@@ -164,7 +164,7 @@ public abstract class MentalIllness : HediffWithComps
                 return;
             }
 
-            var billMedical = new Bill_Medical(counselDepression);
+            var billMedical = new Bill_Medical(counselDepression, null);
             pawn.BillStack.AddBill(billMedical);
             billMedical.Part = pawn.health.hediffSet.GetBrain();
         }

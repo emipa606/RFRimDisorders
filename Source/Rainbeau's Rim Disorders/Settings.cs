@@ -37,7 +37,14 @@ public class Settings : ModSettings
         list.Gap(48);
         list.Label("RRD.CounselingEffectiveness".Translate() + "  " + (int)counselingEffectiveness + "%");
         counselingEffectiveness = list.Slider(counselingEffectiveness, 10f, 300.99f);
-        list.Gap();
+        if (Controller.currentVersion != null)
+        {
+            list.Gap();
+            GUI.contentColor = Color.gray;
+            list.Label("RRD.ModVersion".Translate(Controller.currentVersion));
+            GUI.contentColor = Color.white;
+        }
+
         list.End();
     }
 

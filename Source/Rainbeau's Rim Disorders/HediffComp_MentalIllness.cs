@@ -79,11 +79,10 @@ public class HediffComp_MentalIllness : HediffComp
         else if (parent.Severity < Props.maxEpisodeStrength)
         {
             var hediffWithComp = parent;
-            hediffWithComp.Severity = hediffWithComp.Severity + (Rand.Value * Props.maxEpisodeStrength);
+            hediffWithComp.Severity += Rand.Value * Props.maxEpisodeStrength;
             parent.Severity = Math.Min(parent.Severity, Props.maxEpisodeStrength);
             var hediffCompPropertiesMentalIllness = Props;
-            hediffCompPropertiesMentalIllness.maxEpisodeStrength =
-                hediffCompPropertiesMentalIllness.maxEpisodeStrength + (Rand.Value * 0.2f);
+            hediffCompPropertiesMentalIllness.maxEpisodeStrength += Rand.Value * 0.2f;
         }
     }
 }

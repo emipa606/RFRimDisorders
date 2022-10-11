@@ -16,7 +16,7 @@ public class Hediff_Autism : MentalIllness
 
         if (index == 1)
         {
-            if (pawn is { jobs: { curJob: { playerForced: true } } })
+            if (pawn is { jobs.curJob.playerForced: true })
             {
                 pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders.AutismForcedWork);
             }
@@ -34,7 +34,7 @@ public class Hediff_Autism : MentalIllness
 
         if (index == 2)
         {
-            if (pawn is { jobs: { curJob: { playerForced: true } } })
+            if (pawn is { jobs.curJob.playerForced: true })
             {
                 pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders
                     .AutismForcedWorkSevere);
@@ -53,7 +53,7 @@ public class Hediff_Autism : MentalIllness
             return;
         }
 
-        if (pawn is { jobs: { curJob: { playerForced: true } } })
+        if (pawn is { jobs.curJob.playerForced: true })
         {
             pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders
                 .AutismForcedWorkSevere);

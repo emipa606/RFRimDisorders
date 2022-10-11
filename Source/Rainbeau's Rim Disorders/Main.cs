@@ -45,6 +45,11 @@ public class Main
 
     public static bool ShouldIgnoreDownedPawn(Pawn pawn)
     {
+        if (!pawn.mindState.mentalBreaker.CanDoRandomMentalBreaks)
+        {
+            return true;
+        }
+
         if (!ageMattersLoaded && !cslLoaded)
         {
             return false;
@@ -73,26 +78,16 @@ public class Main
             }
         }
 
-        if (bcLoaded)
+        if (!bcLoaded)
         {
-            if (!pawn.health.hediffSet.HasHediff(babyStateHediffDef))
-            {
-                return false;
-            }
-
-            if (pawn.health.hediffSet.GetFirstHediffOfDef(babyStateHediffDef).CurStageIndex == 3)
-            {
-                return false;
-            }
-
-            return true;
+            return cslLoaded && pawn.health.hediffSet.HasHediff(birthHediffDef);
         }
 
-        if (!cslLoaded)
+        if (!pawn.health.hediffSet.HasHediff(babyStateHediffDef))
         {
             return false;
         }
 
-        return pawn.health.hediffSet.HasHediff(birthHediffDef);
+        return pawn.health.hediffSet.GetFirstHediffOfDef(babyStateHediffDef).CurStageIndex != 3;
     }
 }

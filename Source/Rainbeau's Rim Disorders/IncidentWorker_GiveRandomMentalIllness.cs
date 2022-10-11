@@ -17,7 +17,8 @@ public class IncidentWorker_GiveRandomMentalIllness : IncidentWorker
     protected override bool TryExecuteWorker(IncidentParms parms)
     {
         var map = (Map)parms.target;
-        var list = map.mapPawns.FreeColonistsAndPrisoners.ToList();
+        var list = map.mapPawns.FreeColonistsAndPrisoners
+            .Where(pawn => pawn.mindState.mentalBreaker.CanDoRandomMentalBreaks).ToList();
         if (list.Count == 0)
         {
             return false;

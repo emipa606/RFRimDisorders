@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <RRD.RimDisorders>Rainbeau's Rim Disorders</RRD.RimDisorders>
+  <RRD.ModVersion>Installed mod-version: {0}</RRD.ModVersion>
   <RRD.Overview>The settings below determine the rate at which the mod's various mental illnesses will manifest, and how effective counseling will be. Setting any of the illness rates to 0% will prevent those illnesses from manifesting at all. 100% is the mod's default setting, though you can choose to have illnesses manifest more frequently if you want to give yourself a greater challenge.\n\nUsers of SeveralPuffins' original a17 version of the mod should note that the default rate (100%) for each illness is actually just a quarter of the default manifestation rate for that illness in the a17 version. This change was made since users of the mod's original version seemed to universally agree that all of the illnesses manifested too often. For similar reasons, the default effectiveness (100%) of counseling is actually twice the a17 default.</RRD.Overview>
   <RRD.AnxietyChance>Rate at Which Generalized Anxiety will Manifest:</RRD.AnxietyChance>
   <RRD.COCDChance>Rate at Which Cleanliness-OCD will Manifest:</RRD.COCDChance>
