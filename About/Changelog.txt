@@ -1,5 +1,8 @@
 # Changelog for RFRimDisorders
 
+1.4.2 - Now ignores pawns with paralytic abasia and children if biotech is active
+
+
 1.4.1 - Mod updated for 1.4 and passed autotests
 
 

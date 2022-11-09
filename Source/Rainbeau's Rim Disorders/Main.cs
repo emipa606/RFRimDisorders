@@ -15,9 +15,15 @@ public class Main
     private static readonly HediffDef childHediffDef;
     private static readonly HediffDef birthHediffDef;
     private static readonly HediffDef babyStateHediffDef;
+    private static readonly HediffDef abasiaHediffDef;
 
     static Main()
     {
+        if (ModLister.RoyaltyInstalled)
+        {
+            abasiaHediffDef = HediffDef.Named("Abasia");
+        }
+
         ageMattersLoaded = ModLister.GetActiveModWithIdentifier("Troopersmith1.AgeMatters") != null;
         if (ageMattersLoaded)
         {
@@ -46,6 +52,16 @@ public class Main
     public static bool ShouldIgnoreDownedPawn(Pawn pawn)
     {
         if (!pawn.mindState.mentalBreaker.CanDoRandomMentalBreaks)
+        {
+            return true;
+        }
+
+        if (ModLister.RoyaltyInstalled && pawn.health.hediffSet.HasHediff(abasiaHediffDef))
+        {
+            return true;
+        }
+
+        if (ModLister.BiotechInstalled && pawn.DevelopmentalStage < DevelopmentalStage.Child)
         {
             return true;
         }
