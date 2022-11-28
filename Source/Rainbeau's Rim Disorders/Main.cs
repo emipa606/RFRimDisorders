@@ -16,12 +16,18 @@ public class Main
     private static readonly HediffDef birthHediffDef;
     private static readonly HediffDef babyStateHediffDef;
     private static readonly HediffDef abasiaHediffDef;
+    private static readonly HediffDef deathRestHediffDef;
 
     static Main()
     {
         if (ModLister.RoyaltyInstalled)
         {
             abasiaHediffDef = HediffDef.Named("Abasia");
+        }
+
+        if (ModLister.BiotechInstalled)
+        {
+            deathRestHediffDef = HediffDef.Named("Deathrest");
         }
 
         ageMattersLoaded = ModLister.GetActiveModWithIdentifier("Troopersmith1.AgeMatters") != null;
@@ -61,7 +67,9 @@ public class Main
             return true;
         }
 
-        if (ModLister.BiotechInstalled && pawn.DevelopmentalStage < DevelopmentalStage.Child)
+        if (ModLister.BiotechInstalled &&
+            (pawn.DevelopmentalStage is DevelopmentalStage.Baby or DevelopmentalStage.Newborn ||
+             pawn.health.hediffSet.HasHediff(deathRestHediffDef)))
         {
             return true;
         }
