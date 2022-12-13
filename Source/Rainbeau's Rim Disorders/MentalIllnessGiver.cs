@@ -40,6 +40,11 @@ public static class MentalIllnessGiver
             return;
         }
 
+        if (Main.ShouldIgnoreDownedPawn(p))
+        {
+            return;
+        }
+
         var downed = p.Downed;
         var upper = false;
         var downer = false;

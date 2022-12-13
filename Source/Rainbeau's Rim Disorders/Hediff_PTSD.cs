@@ -17,11 +17,6 @@ public class Hediff_PTSD : MentalIllness
             return;
         }
 
-        if (Main.ShouldIgnoreDownedPawn(pawn))
-        {
-            return;
-        }
-
         if (index >= 2)
         {
             if (Rand.Value < 0.001f * index && GenAI.EnemyIsNear(pawn, 24f))
