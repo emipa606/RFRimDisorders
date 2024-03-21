@@ -18,7 +18,7 @@ public class MentalState_SuicideAttempt : MentalState
             var brain = pawn.health.hediffSet.GetBrain();
             foreach (var allPart in pawn.RaceProps.body.AllParts)
             {
-                if (allPart.def != BodyPartDefOf.Neck)
+                if (allPart.def != DefDatabase<BodyPartDef>.GetNamedSilentFail("Neck"))
                 {
                     continue;
                 }

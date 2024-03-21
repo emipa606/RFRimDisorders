@@ -6,10 +6,10 @@ namespace RimDisorders;
 
 public static class MentalIllnessGiver
 {
-    public static float rate_dep;
-    public static float rate_anx;
-    public static float rate_ocd;
-    public static float rate_pts;
+    public static readonly float rate_dep;
+    public static readonly float rate_anx;
+    public static readonly float rate_ocd;
+    public static readonly float rate_pts;
 
     static MentalIllnessGiver()
     {
@@ -124,6 +124,7 @@ public static class MentalIllnessGiver
         }
 
         DamageInfo? nullable;
+        var nerveDef = DefDatabase<TraitDef>.GetNamedSilentFail("Nerves");
         if (p.needs.mood.thoughts.TotalMoodOffset() < p.mindState.mentalBreaker.BreakThresholdMinor ||
             Rand.Value < 0.1f)
         {
@@ -143,14 +144,14 @@ public static class MentalIllnessGiver
                 rateAnx *= 3f;
             }
 
-            if (p.story.traits.HasTrait(TraitDefOf.Nerves))
+            if (p.story.traits.HasTrait(nerveDef))
             {
-                if (p.story.traits.GetTrait(TraitDefOf.Nerves).Degree == 1)
+                if (p.story.traits.GetTrait(nerveDef).Degree == 1)
                 {
                     rateAnx /= 5f;
                 }
 
-                if (p.story.traits.GetTrait(TraitDefOf.Nerves).Degree == 2)
+                if (p.story.traits.GetTrait(nerveDef).Degree == 2)
                 {
                     rateAnx /= 16f;
                 }
@@ -165,7 +166,7 @@ public static class MentalIllnessGiver
                 if (!upper)
                 {
                     str = !(p.needs.mood.thoughts.TotalMoodOffset() < p.mindState.mentalBreaker.BreakThresholdMajor)
-                        ? string.Concat(str, ".")
+                        ? $"{str}."
                         : string.Concat(str,
                             p.gender != Gender.Male ? "RRD.StressF".Translate() : "RRD.StressM".Translate());
                 }
@@ -197,14 +198,14 @@ public static class MentalIllnessGiver
                 rateDep *= 2f;
             }
 
-            if (p.story.traits.HasTrait(TraitDefOf.Nerves))
+            if (p.story.traits.HasTrait(nerveDef))
             {
-                if (p.story.traits.GetTrait(TraitDefOf.Nerves).Degree == 1)
+                if (p.story.traits.GetTrait(nerveDef).Degree == 1)
                 {
                     rateDep /= 5f;
                 }
 
-                if (p.story.traits.GetTrait(TraitDefOf.Nerves).Degree == 2)
+                if (p.story.traits.GetTrait(nerveDef).Degree == 2)
                 {
                     rateDep /= 16f;
                 }
@@ -220,7 +221,7 @@ public static class MentalIllnessGiver
                     if (!criticalStress)
                     {
                         str1 = !highStress
-                            ? string.Concat(str1, ".")
+                            ? $"{str1}."
                             : string.Concat(str1, "RRD.SeenCorpse".Translate());
                     }
                     else
@@ -234,7 +235,7 @@ public static class MentalIllnessGiver
                 else if (!(p.needs.mood.thoughts.TotalMoodOffset() < p.mindState.mentalBreaker.BreakThresholdMajor))
                 {
                     str1 = !downer
-                        ? string.Concat(str1, ".")
+                        ? $"{str1}."
                         : string.Concat(str1, "RRD.DepressantAddiction".Translate());
                 }
                 else
@@ -271,14 +272,14 @@ public static class MentalIllnessGiver
                 rateOcd *= 2f;
             }
 
-            if (p.story.traits.HasTrait(TraitDefOf.Nerves))
+            if (p.story.traits.HasTrait(nerveDef))
             {
-                if (p.story.traits.GetTrait(TraitDefOf.Nerves).Degree == 1)
+                if (p.story.traits.GetTrait(nerveDef).Degree == 1)
                 {
                     rateOcd /= 5f;
                 }
 
-                if (p.story.traits.GetTrait(TraitDefOf.Nerves).Degree == 2)
+                if (p.story.traits.GetTrait(nerveDef).Degree == 2)
                 {
                     rateOcd /= 16f;
                 }
@@ -298,7 +299,7 @@ public static class MentalIllnessGiver
                 {
                     str2 = !(p.needs.mood.thoughts.TotalMoodOffset() <
                              p.mindState.mentalBreaker.BreakThresholdMajor)
-                        ? string.Concat(str2, ".")
+                        ? $"{str2}."
                         : string.Concat(str2,
                             p.gender != Gender.Male ? "RRD.StressF".Translate() : "RRD.StressM".Translate());
                 }
@@ -322,14 +323,14 @@ public static class MentalIllnessGiver
             ratePts *= 2f;
         }
 
-        if (p.story.traits.HasTrait(TraitDefOf.Nerves))
+        if (p.story.traits.HasTrait(nerveDef))
         {
-            if (p.story.traits.GetTrait(TraitDefOf.Nerves).Degree == 1)
+            if (p.story.traits.GetTrait(nerveDef).Degree == 1)
             {
                 ratePts /= 5f;
             }
 
-            if (p.story.traits.GetTrait(TraitDefOf.Nerves).Degree == 2)
+            if (p.story.traits.GetTrait(nerveDef).Degree == 2)
             {
                 ratePts /= 16f;
             }
@@ -347,7 +348,7 @@ public static class MentalIllnessGiver
         if (!criticalStress)
         {
             str3 = !downed
-                ? string.Concat(str3, ".")
+                ? $"{str3}."
                 : string.Concat(str3, "RRD.AfterDowned".Translate());
         }
         else

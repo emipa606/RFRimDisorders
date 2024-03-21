@@ -6,7 +6,7 @@ namespace RimDisorders;
 
 public abstract class MentalIllness : HediffWithComps
 {
-    public static float mult_counsel;
+    public static readonly float mult_counsel;
 
     static MentalIllness()
     {

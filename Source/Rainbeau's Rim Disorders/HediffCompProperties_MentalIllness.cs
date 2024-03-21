@@ -4,12 +4,12 @@ namespace RimDisorders;
 
 public class HediffCompProperties_MentalIllness : HediffCompProperties
 {
-    public bool counselable = true;
-    public float episodeFrequency = 0f;
-    public float maxEpisodeDuration = 10f;
+    public readonly bool counselable = true;
+    public readonly float episodeFrequency = 0f;
+    public readonly float maxEpisodeDuration = 10f;
+    public readonly float minEpisodeDuration = 2f;
+    public readonly float minEpisodeStrength;
     public float maxEpisodeStrength;
-    public float minEpisodeDuration = 2f;
-    public float minEpisodeStrength;
 
     public HediffCompProperties_MentalIllness()
     {

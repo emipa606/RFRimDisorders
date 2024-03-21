@@ -23,19 +23,19 @@ public class Settings : ModSettings
         list.Label("RRD.Overview".Translate());
         Text.Font = GameFont.Small;
         list.Gap(48);
-        list.Label("RRD.AnxietyChance".Translate() + "  " + (int)anxietyChance + "%");
+        list.Label($"{"RRD.AnxietyChance".Translate() + "  "}{(int)anxietyChance}%");
         anxietyChance = list.Slider(anxietyChance, 0f, 500.99f);
         list.Gap();
-        list.Label("RRD.COCDChance".Translate() + "  " + (int)cocdChance + "%");
+        list.Label($"{"RRD.COCDChance".Translate() + "  "}{(int)cocdChance}%");
         cocdChance = list.Slider(cocdChance, 0f, 500.99f);
         list.Gap();
-        list.Label("RRD.DepressionChance".Translate() + "  " + (int)depressionChance + "%");
+        list.Label($"{"RRD.DepressionChance".Translate() + "  "}{(int)depressionChance}%");
         depressionChance = list.Slider(depressionChance, 0f, 500.99f);
         list.Gap();
-        list.Label("RRD.PTSDChance".Translate() + "  " + (int)ptsdChance + "%");
+        list.Label($"{"RRD.PTSDChance".Translate() + "  "}{(int)ptsdChance}%");
         ptsdChance = list.Slider(ptsdChance, 0f, 500.99f);
         list.Gap(48);
-        list.Label("RRD.CounselingEffectiveness".Translate() + "  " + (int)counselingEffectiveness + "%");
+        list.Label($"{"RRD.CounselingEffectiveness".Translate() + "  "}{(int)counselingEffectiveness}%");
         counselingEffectiveness = list.Slider(counselingEffectiveness, 10f, 300.99f);
         if (Controller.currentVersion != null)
         {

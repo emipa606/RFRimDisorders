@@ -28,7 +28,7 @@ public class Hediff_ADHD : MentalIllness
         {
             pawn.drafter.Drafted = false;
         }
-        else if (pawn is { needs.joy.tolerances: { }, jobs.jobQueue: { } })
+        else if (pawn is { needs.joy.tolerances: not null, jobs.jobQueue: not null })
         {
             Log.Message("ADHD tick event");
             var joyJob = GetJoyJob();

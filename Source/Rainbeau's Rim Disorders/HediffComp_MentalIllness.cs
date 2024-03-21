@@ -72,7 +72,7 @@ public class HediffComp_MentalIllness : HediffComp
 
         if (parent.CurStageIndex == 0)
         {
-            Log.Message(string.Concat("Triggering episode of ", Def.defName, " for", Pawn.Name.ToStringShort));
+            Log.Message($"Triggering episode of {Def.defName} for{Pawn.Name.ToStringShort}");
             parent.Severity = Props.minEpisodeStrength +
                               (Rand.Value * (Props.maxEpisodeStrength - Props.minEpisodeStrength));
         }

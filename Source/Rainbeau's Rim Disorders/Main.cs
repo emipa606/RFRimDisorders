@@ -48,11 +48,13 @@ public class Main
         }
 
         cslLoaded = ModLister.GetActiveModWithIdentifier("Dylan.CSL") != null;
-        if (cslLoaded)
+        if (!cslLoaded)
         {
-            Log.Message("[RimDisorders]: Adding compatibility patch for Children School and Learning");
-            birthHediffDef = HediffDef.Named("ChildBirthInProgress");
+            return;
         }
+
+        Log.Message("[RimDisorders]: Adding compatibility patch for Children School and Learning");
+        birthHediffDef = HediffDef.Named("ChildBirthInProgress");
     }
 
     public static bool ShouldIgnoreDownedPawn(Pawn pawn)

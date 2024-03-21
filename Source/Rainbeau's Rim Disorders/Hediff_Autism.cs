@@ -14,6 +14,7 @@ public class Hediff_Autism : MentalIllness
             return;
         }
 
+        var partyDef = DefDatabase<DutyDef>.GetNamedSilentFail("Party");
         if (index == 1)
         {
             if (pawn is { jobs.curJob.playerForced: true })
@@ -21,15 +22,21 @@ public class Hediff_Autism : MentalIllness
                 pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders.AutismForcedWork);
             }
 
-            if (pawn.mindState is { duty: { } } && pawn.mindState.duty.def == DutyDefOf.Party)
+            if (pawn.mindState is not { duty: not null } || pawn.mindState.duty.def != partyDef)
             {
-                if (Rand.Value < 0.0002f)
-                {
-                    pawn.mindState.duty = null;
-                    pawn.GetLord().ownedPawns.Remove(pawn);
-                    pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
-                }
+                return;
             }
+
+            if (!(Rand.Value < 0.0002f))
+            {
+                return;
+            }
+
+            pawn.mindState.duty = null;
+            pawn.GetLord().ownedPawns.Remove(pawn);
+            pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
+
+            return;
         }
 
         if (index == 2)
@@ -40,12 +47,16 @@ public class Hediff_Autism : MentalIllness
                     .AutismForcedWorkSevere);
             }
 
-            if (pawn.mindState is { duty: { } } && pawn.mindState.duty.def == DutyDefOf.Party)
+            if (pawn.mindState is not { duty: not null } || pawn.mindState.duty.def != partyDef)
             {
-                pawn.mindState.duty = null;
-                pawn.GetLord().ownedPawns.Remove(pawn);
-                pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
+                return;
             }
+
+            pawn.mindState.duty = null;
+            pawn.GetLord().ownedPawns.Remove(pawn);
+            pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
+
+            return;
         }
 
         if (index != 3)
@@ -60,7 +71,7 @@ public class Hediff_Autism : MentalIllness
             pawn.jobs.EndCurrentJob(JobCondition.QueuedNoLongerValid);
         }
 
-        if (pawn.mindState == null || pawn.mindState.duty == null || pawn.mindState.duty.def != DutyDefOf.Party)
+        if (pawn.mindState?.duty == null || pawn.mindState.duty.def != partyDef)
         {
             return;
         }
