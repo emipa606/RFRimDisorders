@@ -17,6 +17,11 @@ public class Hediff_GeneralizedAnxiety : MentalIllness
             return;
         }
 
+        if (!pawn.Spawned)
+        {
+            return;
+        }
+
         if (!pawn.Awake())
         {
             return;

@@ -1,5 +1,8 @@
 # Changelog for RFRimDisorders
 
+1.5.1 - Fix for mechanoids trying to do counseling without any social skill
+
+
 1.5.0 - Mod updated for 1.5 and passed autotests
 
 

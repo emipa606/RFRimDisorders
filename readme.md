@@ -1,7 +1,6 @@
-# RFRimDisorders
+# [[RF] Rim Disorders (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2034038546)
 
 ![Image](https://i.imgur.com/buuPQel.png)
-
 Update of SeveralPuffins mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=833388914
 Based on Rainbeau Flambes 1.0 update
@@ -9,14 +8,12 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1560113539
 and firefoxpdms 1.1 version
 https://github.com/firefoxpdm/Rainbeau-s-Rim-Disorders
 
-- Added patch for stopping some effects on babies from https://steamcommunity.com/sharedfiles/filedetails/?id=2264291966]Age Matters and https://steamcommunity.com/sharedfiles/filedetails/?id=2559574784]Babies and Children
-- Now supports the ADHD and Antidepressants in https://steamcommunity.com/sharedfiles/filedetails/?id=1601812699]More Medications - Reborn
+- Added patch for stopping some effects on babies from [https://steamcommunity.com/sharedfiles/filedetails/?id=2264291966]Age Matters[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2559574784](Babies and Children)
+- Now supports the ADHD and Antidepressants in [https://steamcommunity.com/sharedfiles/filedetails/?id=1601812699](More Medications - Reborn)
 
 ![Image](https://i.imgur.com/pufA0kM.png)
-
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
-
 
 **"Rim Disorders," a mod originally created for RimWorld a17 by SeveralPuffins, introduces more misery, trauma, and poor mental health to your vibrant, lively colony! Pawns will develop, either randomly or due to trauma, new mental health disorders, which can only be cured slowly, through counseling. 
 
@@ -68,23 +65,21 @@ Obviously, my version of "Rim Disorders" owes a great deal to SeveralPuffins, wh
 
 If you're a modpack maker and want to include "Rim Disorders" in your pack, or if you're a modder and want to use it as the basis of a derivative mod, please feel free to do so. I ask only that you let me know about it, and that you credit both me and SeveralPuffins. 
 
-The Ludeon forums discussion thread for my mods can be found https://ludeon.com/forums/index.php?topic=46165]here.
+The Ludeon forums discussion thread for my mods can be found [https://ludeon.com/forums/index.php?topic=46165](here).
 
 If you have any (helpful) suggestions for improvement, please let me know!
 
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
 
-
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib or the standalone https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader and command Ctrl+F12
+-  Post your error-log using [https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404](Uploader) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
+-  Use [https://github.com/RimSort/RimSort/releases/latest](RimSort) to sort your mods
 
 
 
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2034038546]![Image](https://img.shields.io/github/v/release/emipa606/RFRimDisorders?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
-
+[https://steamcommunity.com/sharedfiles/filedetails/changelog/2034038546]![Image]((https://img.shields.io/github/v/release/emipa606/RFRimDisorders?label=latest%20version&style=plastic&color=9f1111&labelColor=black))

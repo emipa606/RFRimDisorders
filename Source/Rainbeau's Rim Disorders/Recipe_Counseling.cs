@@ -34,13 +34,17 @@ public class Recipe_Counseling : RecipeWorker
         }
 
         var firstHediffOfDef = (MentalIllness)pawn.health.hediffSet.GetFirstHediffOfDef(majorDepression);
-        firstHediffOfDef.Counsel(billDoer.skills.GetSkill(SkillDefOf.Social).Level);
+        var relevantSkillLevel = pawn.RaceProps.IsMechanoid
+            ? pawn.RaceProps.mechFixedSkillLevel
+            : pawn.skills.GetSkill(SkillDefOf.Social).Level;
+        firstHediffOfDef.Counsel(relevantSkillLevel);
+
         if (firstHediffOfDef.TryGetComp<HediffComp_MentalIllness>().Props.maxEpisodeStrength <
             firstHediffOfDef.def.stages[1].minSeverity)
         {
             pawn.health.RemoveHediff(firstHediffOfDef);
-            var str1 = string.Format("{1} {0}", "RRD.CuredText".Translate(), pawn.Name.ToStringShort);
-            Messages.Message(str1, pawn, MessageTypeDefOf.PositiveEvent);
+            Messages.Message($"{pawn.Name.ToStringShort} {"RRD.CuredText".Translate()}", pawn,
+                MessageTypeDefOf.PositiveEvent);
         }
 
         pawn.health.AddHediff(HediffDef.Named("Counseled"));

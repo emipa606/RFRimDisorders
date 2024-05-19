@@ -9,6 +9,9 @@
     <recipeUsers>
       <li>Human</li>
     </recipeUsers>
+    <skillRequirements>
+      <Social>1</Social>
+    </skillRequirements>
   </RecipeDef>
   <RecipeDef Name="CounselingVanilla" ParentName="Counseling" Abstract="True">
     <effectWorking>Cook</effectWorking>

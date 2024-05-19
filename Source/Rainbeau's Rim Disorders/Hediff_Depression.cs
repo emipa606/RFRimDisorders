@@ -17,6 +17,11 @@ public class Hediff_Depression : MentalIllness
             return;
         }
 
+        if (!pawn.Spawned)
+        {
+            return;
+        }
+
         if (pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.Refractory))
         {
             return;

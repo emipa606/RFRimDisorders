@@ -9,7 +9,7 @@ public class Hediff_Autism : MentalIllness
 {
     public override void DoSeverityAction(int index)
     {
-        if (index == 0 || pawn.InMentalState || !pawn.Awake())
+        if (index == 0 || pawn.InMentalState || !pawn.Awake() || !pawn.Spawned)
         {
             return;
         }

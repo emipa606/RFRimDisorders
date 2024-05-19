@@ -11,6 +11,11 @@ public class Hediff_COCD : MentalIllness
             return;
         }
 
+        if (!pawn.Spawned)
+        {
+            return;
+        }
+
         if (pawn.mindState.mentalStateHandler.InMentalState)
         {
             return;

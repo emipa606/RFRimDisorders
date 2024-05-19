@@ -14,6 +14,11 @@ public class Hediff_ADHD : MentalIllness
             return;
         }
 
+        if (!pawn.Spawned)
+        {
+            return;
+        }
+
         if (!pawn.Awake())
         {
             return;
@@ -27,21 +32,25 @@ public class Hediff_ADHD : MentalIllness
         if (pawn.Drafted)
         {
             pawn.drafter.Drafted = false;
+            return;
         }
-        else if (pawn is { needs.joy.tolerances: not null, jobs.jobQueue: not null })
-        {
-            Log.Message("ADHD tick event");
-            var joyJob = GetJoyJob();
-            if (joyJob == null)
-            {
-                return;
-            }
 
-            joyJob.playerForced = true;
-            joyJob.ignoreJoyTimeAssignment = true;
-            pawn.jobs.jobQueue.EnqueueFirst(joyJob, JobTag.Idle);
-            pawn.jobs.curDriver.EndJobWith(JobCondition.InterruptOptional);
+        if (pawn is not { needs.joy.tolerances: not null, jobs.jobQueue: not null })
+        {
+            return;
         }
+
+        Log.Message("ADHD tick event");
+        var joyJob = GetJoyJob();
+        if (joyJob == null)
+        {
+            return;
+        }
+
+        joyJob.playerForced = true;
+        joyJob.ignoreJoyTimeAssignment = true;
+        pawn.jobs.jobQueue.EnqueueFirst(joyJob, JobTag.Idle);
+        pawn.jobs.curDriver.EndJobWith(JobCondition.InterruptOptional);
     }
 
     private Job GetJoyJob()

@@ -155,18 +155,23 @@ public abstract class MentalIllness : HediffWithComps
             {
                 pawn.BillStack.Bills.Remove(bill1);
             }
-        }
-        else if (canBeCounseled)
-        {
-            if (pawn.BillStack.Bills.Exists(b =>
-                    b.recipe.defName == counselDepression.defName))
-            {
-                return;
-            }
 
-            var billMedical = new Bill_Medical(counselDepression, null);
-            pawn.BillStack.AddBill(billMedical);
-            billMedical.Part = pawn.health.hediffSet.GetBrain();
+            return;
         }
+
+        if (!canBeCounseled)
+        {
+            return;
+        }
+
+        if (pawn.BillStack.Bills.Exists(b =>
+                b.recipe.defName == counselDepression.defName))
+        {
+            return;
+        }
+
+        var billMedical = new Bill_Medical(counselDepression, null);
+        pawn.BillStack.AddBill(billMedical);
+        billMedical.Part = pawn.health.hediffSet.GetBrain();
     }
 }
