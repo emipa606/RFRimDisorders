@@ -6,16 +6,16 @@ namespace RimDisorders;
 
 public abstract class MentalIllness : HediffWithComps
 {
-    public static readonly float mult_counsel;
+    private static readonly float multCounsel;
 
     static MentalIllness()
     {
-        mult_counsel = 2f * (Controller.Settings.counselingEffectiveness / 100);
+        multCounsel = 2f * (Controller.Settings.counselingEffectiveness / 100);
     }
 
-    public virtual void AnyPostTickAction()
+    private void anyPostTickAction()
     {
-        TryAddCounseling();
+        tryAddCounseling();
         DoSeverityAction(CurStageIndex);
     }
 
@@ -28,7 +28,7 @@ public abstract class MentalIllness : HediffWithComps
         }
 
         var value = Rand.Value * (2f + (0.8f * social)) / 100f;
-        value *= mult_counsel;
+        value *= multCounsel;
         var mentalIllness = this;
         mentalIllness.Severity -= value;
         hediffCompMentalIllness.Props.maxEpisodeStrength -= value;
@@ -37,14 +37,14 @@ public abstract class MentalIllness : HediffWithComps
             $"{"RRD.Improvement".Translate()}: {value * 100f:###}%", 3f);
     }
 
-    public abstract void DoSeverityAction(int index);
+    protected abstract void DoSeverityAction(int index);
 
     public override void PostTick()
     {
         base.PostTick();
         if (pawn != null)
         {
-            AnyPostTickAction();
+            anyPostTickAction();
         }
         else
         {
@@ -52,8 +52,13 @@ public abstract class MentalIllness : HediffWithComps
         }
     }
 
-    public virtual void TryAddCounseling()
+    private void tryAddCounseling()
     {
+        if (!Controller.Settings.automaticallyCounsel)
+        {
+            return;
+        }
+
         var hediffCompMentalIllness = this.TryGetComp<HediffComp_MentalIllness>();
         if (!pawn.Spawned)
         {

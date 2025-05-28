@@ -7,7 +7,7 @@ namespace RimDisorders;
 
 public class Hediff_Autism : MentalIllness
 {
-    public override void DoSeverityAction(int index)
+    protected override void DoSeverityAction(int index)
     {
         if (index == 0 || pawn.InMentalState || !pawn.Awake() || !pawn.Spawned)
         {
@@ -15,69 +15,69 @@ public class Hediff_Autism : MentalIllness
         }
 
         var partyDef = DefDatabase<DutyDef>.GetNamedSilentFail("Party");
-        if (index == 1)
+        switch (index)
         {
-            if (pawn is { jobs.curJob.playerForced: true })
+            case 1:
             {
-                pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders.AutismForcedWork);
-            }
+                if (pawn is { jobs.curJob.playerForced: true })
+                {
+                    pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders.AutismForcedWork);
+                }
 
-            if (pawn.mindState is not { duty: not null } || pawn.mindState.duty.def != partyDef)
-            {
+                if (pawn.mindState is not { duty: not null } || pawn.mindState.duty.def != partyDef)
+                {
+                    return;
+                }
+
+                if (!(Rand.Value < 0.0002f))
+                {
+                    return;
+                }
+
+                pawn.mindState.duty = null;
+                pawn.GetLord().ownedPawns.Remove(pawn);
+                pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
+
                 return;
             }
-
-            if (!(Rand.Value < 0.0002f))
+            case 2:
             {
+                if (pawn is { jobs.curJob.playerForced: true })
+                {
+                    pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders
+                        .AutismForcedWorkSevere);
+                }
+
+                if (pawn.mindState is not { duty: not null } || pawn.mindState.duty.def != partyDef)
+                {
+                    return;
+                }
+
+                pawn.mindState.duty = null;
+                pawn.GetLord().ownedPawns.Remove(pawn);
+                pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
+
                 return;
             }
-
-            pawn.mindState.duty = null;
-            pawn.GetLord().ownedPawns.Remove(pawn);
-            pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
-
-            return;
-        }
-
-        if (index == 2)
-        {
-            if (pawn is { jobs.curJob.playerForced: true })
+            case 3:
             {
-                pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders
-                    .AutismForcedWorkSevere);
+                if (pawn is { jobs.curJob.playerForced: true })
+                {
+                    pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders
+                        .AutismForcedWorkSevere);
+                    pawn.jobs.EndCurrentJob(JobCondition.QueuedNoLongerValid);
+                }
+
+                if (pawn.mindState?.duty == null || pawn.mindState.duty.def != partyDef)
+                {
+                    return;
+                }
+
+                pawn.mindState.duty = null;
+                pawn.GetLord().ownedPawns.Remove(pawn);
+                pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
+                break;
             }
-
-            if (pawn.mindState is not { duty: not null } || pawn.mindState.duty.def != partyDef)
-            {
-                return;
-            }
-
-            pawn.mindState.duty = null;
-            pawn.GetLord().ownedPawns.Remove(pawn);
-            pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
-
-            return;
         }
-
-        if (index != 3)
-        {
-            return;
-        }
-
-        if (pawn is { jobs.curJob.playerForced: true })
-        {
-            pawn.needs.mood.thoughts.memories.TryGainMemory(DiseaseDefOfRimDisorders
-                .AutismForcedWorkSevere);
-            pawn.jobs.EndCurrentJob(JobCondition.QueuedNoLongerValid);
-        }
-
-        if (pawn.mindState?.duty == null || pawn.mindState.duty.def != partyDef)
-        {
-            return;
-        }
-
-        pawn.mindState.duty = null;
-        pawn.GetLord().ownedPawns.Remove(pawn);
-        pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
     }
 }

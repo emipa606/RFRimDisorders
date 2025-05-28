@@ -5,7 +5,7 @@ namespace RimDisorders;
 
 public class Hediff_Depression : MentalIllness
 {
-    public override void DoSeverityAction(int index)
+    protected override void DoSeverityAction(int index)
     {
         if (pawn.mindState.mentalStateHandler.InMentalState)
         {

@@ -7,7 +7,7 @@ namespace RimDisorders;
 
 public class Hediff_ADHD : MentalIllness
 {
-    public override void DoSeverityAction(int index)
+    protected override void DoSeverityAction(int index)
     {
         if (index <= 0)
         {
@@ -41,7 +41,7 @@ public class Hediff_ADHD : MentalIllness
         }
 
         Log.Message("ADHD tick event");
-        var joyJob = GetJoyJob();
+        var joyJob = getJoyJob();
         if (joyJob == null)
         {
             return;
@@ -53,7 +53,7 @@ public class Hediff_ADHD : MentalIllness
         pawn.jobs.curDriver.EndJobWith(JobCondition.InterruptOptional);
     }
 
-    private Job GetJoyJob()
+    private Job getJoyJob()
     {
         Job job;
         var allDefsListForReading = DefDatabase<JoyGiverDef>.AllDefsListForReading;
@@ -61,9 +61,10 @@ public class Hediff_ADHD : MentalIllness
             from j in allDefsListForReading
             where j.Worker.MissingRequiredCapacity(pawn) == null
             select j;
-        if (joyGiverDefs.Count() != 0)
+        var giverDefs = joyGiverDefs as JoyGiverDef[] ?? joyGiverDefs.ToArray();
+        if (giverDefs.Count() != 0)
         {
-            var joyGiverDef = joyGiverDefs.RandomElement();
+            var joyGiverDef = giverDefs.RandomElement();
             job = joyGiverDef.Worker.TryGiveJob(pawn);
         }
         else

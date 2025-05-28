@@ -3,7 +3,7 @@ using Verse;
 
 namespace RimDisorders;
 
-public class HediffComp_MentalIllness : HediffComp
+public sealed class HediffComp_MentalIllness : HediffComp
 {
     private int episodeTicks;
 
@@ -21,7 +21,7 @@ public class HediffComp_MentalIllness : HediffComp
         base.CompPostTick(ref severityadjustment);
         if (Rand.Value < episodeChancePerDay / 60000f)
         {
-            TryTriggerEpisode();
+            tryTriggerEpisode();
         }
 
         if (parent.CurStageIndex <= 0)
@@ -32,13 +32,13 @@ public class HediffComp_MentalIllness : HediffComp
         episodeTicks++;
         if (episodeTicks > Props.maxEpisodeDuration * 60000f)
         {
-            EndEpisode();
+            endEpisode();
         }
         else if (episodeTicks > Props.minEpisodeDuration * 60000f)
         {
             if (Rand.Value < 0.00015f)
             {
-                EndEpisode();
+                endEpisode();
             }
         }
     }
@@ -57,13 +57,13 @@ public class HediffComp_MentalIllness : HediffComp
         }
     }
 
-    public void EndEpisode()
+    private void endEpisode()
     {
         parent.Severity = 0.05f;
         episodeTicks = 0;
     }
 
-    protected virtual void TryTriggerEpisode()
+    private void tryTriggerEpisode()
     {
         if (episodeChancePerDay == 0f)
         {

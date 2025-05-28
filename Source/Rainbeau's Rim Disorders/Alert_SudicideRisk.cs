@@ -17,13 +17,13 @@ public class Alert_SudicideRisk : Alert_Critical
 
     public override AlertReport GetReport()
     {
-        var suidiceRisk = GetSuidiceRisk();
+        var suidiceRisk = getSuicideRisk();
         var alertReport = suidiceRisk != null ? AlertReport.CulpritIs(suidiceRisk) : false;
 
         return alertReport;
     }
 
-    private Pawn GetSuidiceRisk()
+    private static Pawn getSuicideRisk()
     {
         foreach (var map in Find.Maps)
         {

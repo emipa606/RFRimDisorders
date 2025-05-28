@@ -13,14 +13,15 @@ public class MentalState_PanicAttack : MentalState
             return;
         }
 
-        if (Rand.Value < 0.008f && pawn.jobs.curJob.def == JobDefOf.FleeAndCower)
+        switch (Rand.Value)
         {
-            pawn.jobs.StartJob(new Job(JobDefOf.FleeAndCower, pawn.Map.listerThings.AllThings.RandomElement()),
-                JobCondition.InterruptForced);
-        }
-        else if (Rand.Value < 0.012f && pawn.jobs.curJob.def == JobDefOf.FleeAndCower)
-        {
-            pawn.jobs.StartJob(new Job(JobDefOf.FleeAndCower, pawn.Position), JobCondition.InterruptForced);
+            case < 0.008f when pawn.jobs.curJob.def == JobDefOf.FleeAndCower:
+                pawn.jobs.StartJob(new Job(JobDefOf.FleeAndCower, pawn.Map.listerThings.AllThings.RandomElement()),
+                    JobCondition.InterruptForced);
+                break;
+            case < 0.012f when pawn.jobs.curJob.def == JobDefOf.FleeAndCower:
+                pawn.jobs.StartJob(new Job(JobDefOf.FleeAndCower, pawn.Position), JobCondition.InterruptForced);
+                break;
         }
 
         if (pawn.jobs.curJob.def != JobDefOf.FleeAndCower)

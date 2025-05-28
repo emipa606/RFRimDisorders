@@ -17,14 +17,18 @@ public class MentalState_COCDCleaning : MentalState
 
         var filthInHomeArea = pawn.Map.listerFilthInHomeArea?.FilthInHomeArea.Where(thing =>
             pawn.CanReserveAndReach(thing, PathEndMode.ClosestTouch, Danger.Some));
-        if (filthInHomeArea?.Any() == true)
+        if (filthInHomeArea != null)
         {
-            pawn.jobs.StartJob(new Job(JobDefOf.Clean, filthInHomeArea.RandomElement())
+            var inHomeArea = filthInHomeArea as Thing[] ?? filthInHomeArea.ToArray();
+            if (inHomeArea.Any())
             {
-                locomotionUrgency = LocomotionUrgency.Sprint
-            }, JobCondition.InterruptForced);
-            base.MentalStateTick();
-            return;
+                pawn.jobs.StartJob(new Job(JobDefOf.Clean, inHomeArea.RandomElement())
+                {
+                    locomotionUrgency = LocomotionUrgency.Sprint
+                }, JobCondition.InterruptForced);
+                base.MentalStateTick();
+                return;
+            }
         }
 
         if (pawn.jobs.curJob?.def != JobDefOf.GotoWander)

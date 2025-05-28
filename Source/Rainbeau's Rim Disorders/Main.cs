@@ -8,7 +8,7 @@ public class Main
     private static readonly bool ageMattersLoaded;
     private static readonly bool cslLoaded;
     public static readonly bool mmLoaded;
-    public static readonly bool bcLoaded;
+    private static readonly bool bcLoaded;
     private static readonly HediffDef babyHediffDef;
     private static readonly HediffDef baby2HediffDef;
     private static readonly HediffDef toddlerHediffDef;
@@ -30,7 +30,7 @@ public class Main
             deathRestHediffDef = HediffDef.Named("Deathrest");
         }
 
-        ageMattersLoaded = ModLister.GetActiveModWithIdentifier("Troopersmith1.AgeMatters") != null;
+        ageMattersLoaded = ModLister.GetActiveModWithIdentifier("Troopersmith1.AgeMatters", true) != null;
         if (ageMattersLoaded)
         {
             Log.Message("[RimDisorders]: Adding compatibility patch for Age Matters");
@@ -40,14 +40,14 @@ public class Main
             childHediffDef = HediffDef.Named("AgeMatters_child");
         }
 
-        mmLoaded = ModLister.GetActiveModWithIdentifier("Techmago.MoreMedications") != null;
-        bcLoaded = ModLister.GetActiveModWithIdentifier("babies.and.children.continued.13") != null;
+        mmLoaded = ModLister.GetActiveModWithIdentifier("Techmago.MoreMedications", true) != null;
+        bcLoaded = ModLister.GetActiveModWithIdentifier("babies.and.children.continued.13", true) != null;
         if (bcLoaded)
         {
             babyStateHediffDef = HediffDef.Named("BabyState0");
         }
 
-        cslLoaded = ModLister.GetActiveModWithIdentifier("Dylan.CSL") != null;
+        cslLoaded = ModLister.GetActiveModWithIdentifier("Dylan.CSL", true) != null;
         if (!cslLoaded)
         {
             return;

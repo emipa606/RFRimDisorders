@@ -4,7 +4,7 @@ namespace RimDisorders;
 
 public class Hediff_COCD : MentalIllness
 {
-    public override void DoSeverityAction(int index)
+    protected override void DoSeverityAction(int index)
     {
         if (pawn.IsPrisoner)
         {

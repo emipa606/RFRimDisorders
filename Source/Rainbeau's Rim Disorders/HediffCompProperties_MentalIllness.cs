@@ -18,11 +18,11 @@ public class HediffCompProperties_MentalIllness : HediffCompProperties
         minEpisodeStrength = GetMinStrength;
     }
 
-    public float GetMinStrength => Rand.Value * maxEpisodeStrength;
+    private float GetMinStrength => Rand.Value * maxEpisodeStrength;
 
-    public float GetNewMaxStrength => MaxEpisodeStrengthCurve().Evaluate(Rand.Value);
+    private float GetNewMaxStrength => maxEpisodeStrengthCurve().Evaluate(Rand.Value);
 
-    private SimpleCurve MaxEpisodeStrengthCurve()
+    private static SimpleCurve maxEpisodeStrengthCurve()
     {
         var simpleCurve = new SimpleCurve();
         simpleCurve.Add(new CurvePoint(0f, 0.2f));

@@ -1,6 +1,7 @@
 # [[RF] Rim Disorders (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2034038546)
 
 ![Image](https://i.imgur.com/buuPQel.png)
+
 Update of SeveralPuffins mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=833388914
 Based on Rainbeau Flambes 1.0 update
@@ -8,8 +9,8 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1560113539
 and firefoxpdms 1.1 version
 https://github.com/firefoxpdm/Rainbeau-s-Rim-Disorders
 
-- Added patch for stopping some effects on babies from [https://steamcommunity.com/sharedfiles/filedetails/?id=2264291966]Age Matters[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2559574784](Babies and Children)
-- Now supports the ADHD and Antidepressants in [https://steamcommunity.com/sharedfiles/filedetails/?id=1601812699](More Medications - Reborn)
+- Added patch for stopping some effects on babies from [Age Matters](https://steamcommunity.com/sharedfiles/filedetails/?id=2264291966) and [Babies and Children](https://steamcommunity.com/sharedfiles/filedetails/?id=2559574784)
+- Now supports the ADHD and Antidepressants in [More Medications - Reborn](https://steamcommunity.com/sharedfiles/filedetails/?id=1601812699)
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 	
@@ -21,7 +22,7 @@ Note that this mod will make your pawns' lives more difficult! Your best researc
 
 -- Rainbeau Flambe (dburgdorf)**
 
-# **[u]What the Mod Does:[/u]**
+# **<ins>What the Mod Does:</ins>**
 
 
 *(1) Adds Illnesses.*
@@ -48,38 +49,39 @@ Counseling appears as a bill on the individual with the illness, like surgery. A
 
 (An additional note from SeveralPuffins, the mod's original creator, on how counseling currently works: "Counseled patients currently go to sleep whilst someone makes metalwork noises at them. My headcanon: 3X1st century counseling is mostly about hypnosis, strobe lights and chimes. I'm pretty sure I'm getting that image from 'Hannibal.'")
   
-# **[u]Compatibility:[/u]**
+# **<ins>Compatibility:</ins>**
 
 
 "Rim Disorders" can safely be added to a game in progress. Removing it from a game in progress, however, could create problems.
 
 I am as yet unaware of any conflicts with other mods.
 
-# **[u]Credits:[/u]**
+# **<ins>Credits:</ins>**
 
 
 Obviously, my version of "Rim Disorders" owes a great deal to SeveralPuffins, who originally created it. I have, myself, done little with it so far beyond simply ensuring that it functions in RimWorld 1.0.
 
-# **[u]License:[/u]**
+# **<ins>License:</ins>**
 
 
 If you're a modpack maker and want to include "Rim Disorders" in your pack, or if you're a modder and want to use it as the basis of a derivative mod, please feel free to do so. I ask only that you let me know about it, and that you credit both me and SeveralPuffins. 
 
-The Ludeon forums discussion thread for my mods can be found [https://ludeon.com/forums/index.php?topic=46165](here).
+The Ludeon forums discussion thread for my mods can be found [here](https://ludeon.com/forums/index.php?topic=46165).
 
 If you have any (helpful) suggestions for improvement, please let me know!
 
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
 
+
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404](Uploader) and command Ctrl+F12
+-  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use [https://github.com/RimSort/RimSort/releases/latest](RimSort) to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
-
-[https://steamcommunity.com/sharedfiles/filedetails/changelog/2034038546]![Image]((https://img.shields.io/github/v/release/emipa606/RFRimDisorders?label=latest%20version&style=plastic&color=9f1111&labelColor=black))
+[![Image](https://img.shields.io/github/v/release/emipa606/RFRimDisorders?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2034038546) | tags:  counseling, mental health
