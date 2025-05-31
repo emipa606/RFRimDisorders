@@ -22,10 +22,12 @@ public class MentalState_COCDCleaning : MentalState
             var inHomeArea = filthInHomeArea as Thing[] ?? filthInHomeArea.ToArray();
             if (inHomeArea.Any())
             {
-                pawn.jobs.StartJob(new Job(JobDefOf.Clean, inHomeArea.RandomElement())
+                Job clnJob = new Job(JobDefOf.Clean)
                 {
                     locomotionUrgency = LocomotionUrgency.Sprint
-                }, JobCondition.InterruptForced);
+                };
+                clnJob.AddQueuedTarget(TargetIndex.A, inHomeArea.RandomElement());
+                pawn.jobs.StartJob(clnJob, JobCondition.InterruptForced);
                 base.MentalStateTick();
                 return;
             }
