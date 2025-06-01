@@ -1,5 +1,8 @@
 # Changelog for RFRimDisorders
 
+1.5.3 - Fix for ocdcleaning issue, thanks Noxilie
+
+
 1.5.2 - Added setting to not automatically schedule counseling
 Used DeepL to update translations for ChineseSimplified, French, German, Russian
 
