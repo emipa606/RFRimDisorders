@@ -6,7 +6,7 @@ namespace RimDisorders;
 
 public class MentalState_PanicAttack : MentalState
 {
-    public override void MentalStateTick()
+    public override void MentalStateTick(int delta)
     {
         if (pawn.needs.rest.CurCategory == RestCategory.Exhausted)
         {
@@ -30,7 +30,7 @@ public class MentalState_PanicAttack : MentalState
                 JobCondition.InterruptForced);
         }
 
-        base.MentalStateTick();
+        base.MentalStateTick(delta);
     }
 
     public override void PostEnd()

@@ -7,11 +7,11 @@ namespace RimDisorders;
 
 public class MentalState_COCDCleaning : MentalState
 {
-    public override void MentalStateTick()
+    public override void MentalStateTick(int delta)
     {
         if (pawn.jobs.curJob?.def == JobDefOf.Clean)
         {
-            base.MentalStateTick();
+            base.MentalStateTick(delta);
             return;
         }
 
@@ -28,7 +28,7 @@ public class MentalState_COCDCleaning : MentalState
                 };
                 cleanJob.AddQueuedTarget(TargetIndex.A, inHomeArea.RandomElement());
                 pawn.jobs.StartJob(cleanJob, JobCondition.InterruptForced);
-                base.MentalStateTick();
+                base.MentalStateTick(delta);
                 return;
             }
         }
@@ -40,7 +40,7 @@ public class MentalState_COCDCleaning : MentalState
             pawn.jobs.StartJob(new Job(JobDefOf.GotoWander, randomLocation), JobCondition.InterruptForced);
         }
 
-        base.MentalStateTick();
+        base.MentalStateTick(delta);
     }
 
     public override void PostEnd()

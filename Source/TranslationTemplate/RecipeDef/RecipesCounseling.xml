@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: counsel cleanliness OCD -->
+  <CounselCOCD.label>counsel cleanliness OCD</CounselCOCD.label>
+  <!-- EN: Counsel for cleanliness OCD. -->
+  <CounselCOCD.description>Counsel for cleanliness OCD.</CounselCOCD.description>
+  <!-- EN: Counseling. -->
+  <CounselCOCD.jobString>Counseling.</CounselCOCD.jobString>
+  <!-- EN: counsel depression -->
+  <CounselDepression.label>counsel depression</CounselDepression.label>
+  <!-- EN: Counsel for depression. -->
+  <CounselDepression.description>Counsel for depression.</CounselDepression.description>
+  <!-- EN: Counseling. -->
+  <CounselDepression.jobString>Counseling.</CounselDepression.jobString>
+  <!-- EN: counsel anxiety -->
+  <CounselGAD.label>counsel anxiety</CounselGAD.label>
+  <!-- EN: Counsel for anxiety. -->
+  <CounselGAD.description>Counsel for anxiety.</CounselGAD.description>
+  <!-- EN: Counseling. -->
+  <CounselGAD.jobString>Counseling.</CounselGAD.jobString>
+  <!-- EN: counsel PTSD -->
+  <CounselPTSD.label>counsel PTSD</CounselPTSD.label>
+  <!-- EN: Counsel for PTSD. -->
+  <CounselPTSD.description>Counsel for PTSD.</CounselPTSD.description>
+  <!-- EN: Counseling. -->
+  <CounselPTSD.jobString>Counseling.</CounselPTSD.jobString>
+</LanguageData>

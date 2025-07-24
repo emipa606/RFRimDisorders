@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: obsessively cleaning -->
+  <COCDCleaning.label>obsessively cleaning</COCDCleaning.label>
+  <!-- EN: Mental state: Obsessively Cleaning -->
+  <COCDCleaning.baseInspectLine>Mental state: Obsessively Cleaning</COCDCleaning.baseInspectLine>
+  <!-- EN: {0} is obsessively cleaning -->
+  <COCDCleaning.beginLetter>{0} is obsessively cleaning</COCDCleaning.beginLetter>
+  <!-- EN: Obsessive Cleaning -->
+  <COCDCleaning.beginLetterLabel>Obsessive Cleaning</COCDCleaning.beginLetterLabel>
+  <!-- EN: {0} has stopped obsessively cleaning. -->
+  <COCDCleaning.recoveryMessage>{0} has stopped obsessively cleaning.</COCDCleaning.recoveryMessage>
+  <!-- EN: having panic attack -->
+  <PanicAttack.label>having panic attack</PanicAttack.label>
+  <!-- EN: Mental state: Panic Attack -->
+  <PanicAttack.baseInspectLine>Mental state: Panic Attack</PanicAttack.baseInspectLine>
+  <!-- EN: {0} is having a panic attack! -->
+  <PanicAttack.beginLetter>{0} is having a panic attack!</PanicAttack.beginLetter>
+  <!-- EN: panic attack -->
+  <PanicAttack.beginLetterLabel>panic attack</PanicAttack.beginLetterLabel>
+  <!-- EN: {0} has recovered from the panic attack. -->
+  <PanicAttack.recoveryMessage>{0} has recovered from the panic attack.</PanicAttack.recoveryMessage>
+  <!-- EN: attempting suicide -->
+  <SuicideAttempt.label>attempting suicide</SuicideAttempt.label>
+  <!-- EN: Mental state: Attempting Suicide! -->
+  <SuicideAttempt.baseInspectLine>Mental state: Attempting Suicide!</SuicideAttempt.baseInspectLine>
+  <!-- EN: {0} is attempting suicide! -->
+  <SuicideAttempt.beginLetter>{0} is attempting suicide!</SuicideAttempt.beginLetter>
+  <!-- EN: suicide attempt -->
+  <SuicideAttempt.beginLetterLabel>suicide attempt</SuicideAttempt.beginLetterLabel>
+  <!-- EN: {0} is no longer attempting suicide. -->
+  <SuicideAttempt.recoveryMessage>{0} is no longer attempting suicide.</SuicideAttempt.recoveryMessage>
+</LanguageData>

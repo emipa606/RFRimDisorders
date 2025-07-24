@@ -2,11 +2,17 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5",
-  "LastXmlCleaning": "2025-06-01T20:44:39.2618072+02:00",
+  "PreviewVersion": "1.6",
+  "LastXmlCleaning": "2025-07-24T20:13:15.9496478+02:00",
   "SocialImageSet": true,
   "SearchTags": [
     " counseling",
     "mental health"
-  ]
+  ],
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 54742,
+  "LinesOfXML": 23120,
+  "CodeBaseSize": 77
 }

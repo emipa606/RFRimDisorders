@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Uncomfortable crowd -->
+  <AutismCrowdedThought.stages.Uncomfortable_crowd.label>Uncomfortable crowd</AutismCrowdedThought.stages.Uncomfortable_crowd.label>
+  <!-- EN: This many people at once is a bit overwhelming. -->
+  <AutismCrowdedThought.stages.Uncomfortable_crowd.description>This many people at once is a bit overwhelming.</AutismCrowdedThought.stages.Uncomfortable_crowd.description>
+  <!-- EN: Overwhelming crowd -->
+  <AutismCrowdedThought.stages.Overwhelming_crowd.label>Overwhelming crowd</AutismCrowdedThought.stages.Overwhelming_crowd.label>
+  <!-- EN: I don't want all this bustle to cause a meltdown. -->
+  <AutismCrowdedThought.stages.Overwhelming_crowd.description>I don't want all this bustle to cause a meltdown.</AutismCrowdedThought.stages.Overwhelming_crowd.description>
+  <!-- EN: Totally overwhelming crowd -->
+  <AutismCrowdedThought.stages.Totally_overwhelming_crowd.label>Totally overwhelming crowd</AutismCrowdedThought.stages.Totally_overwhelming_crowd.label>
+  <!-- EN: I can't handle all this input! -->
+  <AutismCrowdedThought.stages.Totally_overwhelming_crowd.description>I can't handle all this input!</AutismCrowdedThought.stages.Totally_overwhelming_crowd.description>
+  <!-- EN: told to prioritize work -->
+  <AutismForcedWork.stages.told_to_prioritize_work.label>told to prioritize work</AutismForcedWork.stages.told_to_prioritize_work.label>
+  <!-- EN: The order I was made to do my work in makes no sense! -->
+  <AutismForcedWork.stages.told_to_prioritize_work.description>The order I was made to do my work in makes no sense!</AutismForcedWork.stages.told_to_prioritize_work.description>
+  <!-- EN: told to prioritize work -->
+  <AutismForcedWorkSevere.stages.told_to_prioritize_work.label>told to prioritize work</AutismForcedWorkSevere.stages.told_to_prioritize_work.label>
+  <!-- EN: I was made to do jobs in all the wrong order. I hate it. -->
+  <AutismForcedWorkSevere.stages.told_to_prioritize_work.description>I was made to do jobs in all the wrong order. I hate it.</AutismForcedWorkSevere.stages.told_to_prioritize_work.description>
+  <!-- EN: mild cOCD -->
+  <COCDThought.stages.mild_cOCD.label>mild cOCD</COCDThought.stages.mild_cOCD.label>
+  <!-- EN: I'm distracted by the dirt. -->
+  <COCDThought.stages.mild_cOCD.description>I'm distracted by the dirt.</COCDThought.stages.mild_cOCD.description>
+  <!-- EN: moderate cOCD -->
+  <COCDThought.stages.moderate_cOCD.label>moderate cOCD</COCDThought.stages.moderate_cOCD.label>
+  <!-- EN: It's disgusting here. I can't stop thinking about it. -->
+  <COCDThought.stages.moderate_cOCD.description>It's disgusting here. I can't stop thinking about it.</COCDThought.stages.moderate_cOCD.description>
+  <!-- EN: severe cOCD -->
+  <COCDThought.stages.severe_cOCD.label>severe cOCD</COCDThought.stages.severe_cOCD.label>
+  <!-- EN: It's horrible! I have to get clean! -->
+  <COCDThought.stages.severe_cOCD.description>It's horrible! I have to get clean!</COCDThought.stages.severe_cOCD.description>
+  <!-- EN: Counseled -->
+  <CounseledThought.stages.Counseled.label>Counseled</CounseledThought.stages.Counseled.label>
+  <!-- EN: I've learned a lot recently in counseling. -->
+  <CounseledThought.stages.Counseled.description>I've learned a lot recently in counseling.</CounseledThought.stages.Counseled.description>
+  <!-- EN: mild anxiety -->
+  <GeneralizedAnxietyThought.stages.mild_anxiety.label>mild anxiety</GeneralizedAnxietyThought.stages.mild_anxiety.label>
+  <!-- EN: I keep thinking something bad's going to happen. -->
+  <GeneralizedAnxietyThought.stages.mild_anxiety.description>I keep thinking something bad's going to happen.</GeneralizedAnxietyThought.stages.mild_anxiety.description>
+  <!-- EN: moderate anxiety -->
+  <GeneralizedAnxietyThought.stages.moderate_anxiety.label>moderate anxiety</GeneralizedAnxietyThought.stages.moderate_anxiety.label>
+  <!-- EN: I'm sure something awful is coming. -->
+  <GeneralizedAnxietyThought.stages.moderate_anxiety.description>I'm sure something awful is coming.</GeneralizedAnxietyThought.stages.moderate_anxiety.description>
+  <!-- EN: severe anxiety -->
+  <GeneralizedAnxietyThought.stages.severe_anxiety.label>severe anxiety</GeneralizedAnxietyThought.stages.severe_anxiety.label>
+  <!-- EN: I feel paralyzed by visions of catastrophe! -->
+  <GeneralizedAnxietyThought.stages.severe_anxiety.description>I feel paralyzed by visions of catastrophe!</GeneralizedAnxietyThought.stages.severe_anxiety.description>
+  <!-- EN: mild depression -->
+  <MajorDepressionThought.stages.mild_depression.label>mild depression</MajorDepressionThought.stages.mild_depression.label>
+  <!-- EN: It's hard to say anything good about life right now. -->
+  <MajorDepressionThought.stages.mild_depression.description>It's hard to say anything good about life right now.</MajorDepressionThought.stages.mild_depression.description>
+  <!-- EN: moderate depression -->
+  <MajorDepressionThought.stages.moderate_depression.label>moderate depression</MajorDepressionThought.stages.moderate_depression.label>
+  <!-- EN: I don't know if I can wake up to this again. -->
+  <MajorDepressionThought.stages.moderate_depression.description>I don't know if I can wake up to this again.</MajorDepressionThought.stages.moderate_depression.description>
+  <!-- EN: severe depression -->
+  <MajorDepressionThought.stages.severe_depression.label>severe depression</MajorDepressionThought.stages.severe_depression.label>
+  <!-- EN: I can't think. I can't feel. What's the point of carrying on? -->
+  <MajorDepressionThought.stages.severe_depression.description>I can't think. I can't feel. What's the point of carrying on?</MajorDepressionThought.stages.severe_depression.description>
+</LanguageData>

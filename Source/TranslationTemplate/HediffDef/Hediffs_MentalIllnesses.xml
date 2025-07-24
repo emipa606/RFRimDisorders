@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: ADHD -->
+  <ADHD.label>ADHD</ADHD.label>
+  <!-- EN: no clue... -->
+  <ADHD.description>no clue...</ADHD.description>
+  <!-- EN: controlled -->
+  <ADHD.stages.controlled.label>controlled</ADHD.stages.controlled.label>
+  <!-- EN: mild -->
+  <ADHD.stages.mild.label>mild</ADHD.stages.mild.label>
+  <!-- EN: moderate -->
+  <ADHD.stages.moderate.label>moderate</ADHD.stages.moderate.label>
+  <!-- EN: severe -->
+  <ADHD.stages.severe.label>severe</ADHD.stages.severe.label>
+  <!-- EN: Autism -->
+  <Autism.label>Autism</Autism.label>
+  <!-- EN: no clue... -->
+  <Autism.description>no clue...</Autism.description>
+  <!-- EN: invisible -->
+  <Autism.stages.invisible.label>invisible</Autism.stages.invisible.label>
+  <!-- EN: Level 1 -->
+  <Autism.stages.Level_1.label>Level 1</Autism.stages.Level_1.label>
+  <!-- EN: Level 2 -->
+  <Autism.stages.Level_2.label>Level 2</Autism.stages.Level_2.label>
+  <!-- EN: Level 3 -->
+  <Autism.stages.Level_3.label>Level 3</Autism.stages.Level_3.label>
+  <!-- EN: cleanliness OCD -->
+  <COCD.label>cleanliness OCD</COCD.label>
+  <!-- EN: no clue... -->
+  <COCD.description>no clue...</COCD.description>
+  <!-- EN: controlled -->
+  <COCD.stages.controlled.label>controlled</COCD.stages.controlled.label>
+  <!-- EN: mild -->
+  <COCD.stages.mild.label>mild</COCD.stages.mild.label>
+  <!-- EN: moderate -->
+  <COCD.stages.moderate.label>moderate</COCD.stages.moderate.label>
+  <!-- EN: severe -->
+  <COCD.stages.severe.label>severe</COCD.stages.severe.label>
+  <!-- EN: recently counseled -->
+  <Counseled.label>recently counseled</Counseled.label>
+  <!-- EN: no clue... -->
+  <Counseled.description>no clue...</Counseled.description>
+  <!-- EN: generalized anxiety -->
+  <GeneralizedAnxiety.label>generalized anxiety</GeneralizedAnxiety.label>
+  <!-- EN: no clue... -->
+  <GeneralizedAnxiety.description>no clue...</GeneralizedAnxiety.description>
+  <!-- EN: controlled -->
+  <GeneralizedAnxiety.stages.controlled.label>controlled</GeneralizedAnxiety.stages.controlled.label>
+  <!-- EN: mild -->
+  <GeneralizedAnxiety.stages.mild.label>mild</GeneralizedAnxiety.stages.mild.label>
+  <!-- EN: moderate -->
+  <GeneralizedAnxiety.stages.moderate.label>moderate</GeneralizedAnxiety.stages.moderate.label>
+  <!-- EN: severe -->
+  <GeneralizedAnxiety.stages.severe.label>severe</GeneralizedAnxiety.stages.severe.label>
+  <!-- EN: major depression -->
+  <MajorDepression.label>major depression</MajorDepression.label>
+  <!-- EN: no clue... -->
+  <MajorDepression.description>no clue...</MajorDepression.description>
+  <!-- EN: controlled -->
+  <MajorDepression.stages.controlled.label>controlled</MajorDepression.stages.controlled.label>
+  <!-- EN: mild -->
+  <MajorDepression.stages.mild.label>mild</MajorDepression.stages.mild.label>
+  <!-- EN: moderate -->
+  <MajorDepression.stages.moderate.label>moderate</MajorDepression.stages.moderate.label>
+  <!-- EN: severe -->
+  <MajorDepression.stages.severe.label>severe</MajorDepression.stages.severe.label>
+  <!-- EN: PTSD -->
+  <PTSD.label>PTSD</PTSD.label>
+  <!-- EN: no clue... -->
+  <PTSD.description>no clue...</PTSD.description>
+  <!-- EN: controlled -->
+  <PTSD.stages.controlled.label>controlled</PTSD.stages.controlled.label>
+  <!-- EN: mild -->
+  <PTSD.stages.mild.label>mild</PTSD.stages.mild.label>
+  <!-- EN: moderate -->
+  <PTSD.stages.moderate.label>moderate</PTSD.stages.moderate.label>
+  <!-- EN: severe -->
+  <PTSD.stages.severe.label>severe</PTSD.stages.severe.label>
+  <!-- EN: refractory period after break -->
+  <Refractory.label>refractory period after break</Refractory.label>
+  <!-- EN: no clue... -->
+  <Refractory.description>no clue...</Refractory.description>
+</LanguageData>

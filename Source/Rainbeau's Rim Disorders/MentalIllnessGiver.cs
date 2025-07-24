@@ -23,11 +23,11 @@ public static class MentalIllnessGiver
     {
         foreach (var map in Find.Maps)
         {
-            foreach (var list in map.mapPawns.FreeColonistsAndPrisonersSpawned.ToList())
+            foreach (var pawn in map.mapPawns.FreeColonistsAndPrisonersSpawned.ToList())
             {
-                if (!list.Dead)
+                if (!pawn.Dead && pawn.IsHashIntervalTick(100))
                 {
-                    CheckPawnForTriggers(list);
+                    CheckPawnForTriggers(pawn);
                 }
             }
         }

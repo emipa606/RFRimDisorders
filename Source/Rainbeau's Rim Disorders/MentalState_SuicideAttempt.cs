@@ -6,7 +6,7 @@ namespace RimDisorders;
 
 public class MentalState_SuicideAttempt : MentalState
 {
-    public override void MentalStateTick()
+    public override void MentalStateTick(int delta)
     {
         if (pawn.jobs.curJob.def != JobDefOf.Wait_Combat)
         {
@@ -39,7 +39,7 @@ public class MentalState_SuicideAttempt : MentalState
             }
         }
 
-        base.MentalStateTick();
+        base.MentalStateTick(delta);
     }
 
     public override void PostEnd()
