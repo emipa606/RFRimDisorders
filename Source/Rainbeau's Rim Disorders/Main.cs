@@ -3,7 +3,7 @@
 namespace RimDisorders;
 
 [StaticConstructorOnStartup]
-public class Main
+public static class Main
 {
     private static readonly bool ageMattersLoaded;
     private static readonly bool cslLoaded;

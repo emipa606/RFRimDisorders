@@ -6,4 +6,19 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="Rainbeau's Rim Disorders/Rainbeau's Rim Disorders.csproj" />
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/">
+    <File Path="../1.7/Defs/Hediffs_MentalIllnesses.xml" />
+    <File Path="../1.7/Defs/MentalBreaks.xml" />
+    <File Path="../1.7/Defs/RecipesCounseling.xml" />
+    <File Path="../1.7/Defs/Thoughts_Illnesses.xml" />
+  </Folder>
+  <Folder Name="/XML/Patches/">
+    <File Path="../Patches/HediffGiverSets.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/English.xml" />
+  </Folder>
 </Solution>

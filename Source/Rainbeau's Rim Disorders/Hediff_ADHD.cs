@@ -47,7 +47,6 @@ public class Hediff_ADHD : MentalIllness
             return;
         }
 
-        joyJob.playerForced = true;
         joyJob.ignoreJoyTimeAssignment = true;
         pawn.jobs.jobQueue.EnqueueFirst(joyJob, JobTag.Idle);
         pawn.jobs.curDriver.EndJobWith(JobCondition.InterruptOptional);
@@ -62,7 +61,7 @@ public class Hediff_ADHD : MentalIllness
             where j.Worker.MissingRequiredCapacity(pawn) == null
             select j;
         var giverDefs = joyGiverDefs as JoyGiverDef[] ?? joyGiverDefs.ToArray();
-        if (giverDefs.Count() != 0)
+        if (giverDefs.Length != 0)
         {
             var joyGiverDef = giverDefs.RandomElement();
             job = joyGiverDef.Worker.TryGiveJob(pawn);

@@ -22,22 +22,16 @@ public class Hediff_PTSD : MentalIllness
             return;
         }
 
-        if (index >= 2)
+        if (index >= 2 && Rand.Value < 0.001f * index && GenAI.EnemyIsNear(pawn, 24f) && (pawn.MentalState == null ||
+                pawn.MentalState.def != DiseaseDefOfRimDisorders.PanicAttack))
         {
-            if (Rand.Value < 0.001f * index && GenAI.EnemyIsNear(pawn, 24f))
+            if (pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.Refractory))
             {
-                if (pawn.MentalState == null ||
-                    pawn.MentalState.def != DiseaseDefOfRimDisorders.PanicAttack)
-                {
-                    if (pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.Refractory))
-                    {
-                        return;
-                    }
-
-                    pawn.mindState.mentalStateHandler.TryStartMentalState(
-                        DiseaseDefOfRimDisorders.PanicAttack, "RRD.StressFlashback".Translate(), true);
-                }
+                return;
             }
+
+            pawn.mindState.mentalStateHandler.TryStartMentalState(
+                DiseaseDefOfRimDisorders.PanicAttack, "RRD.StressFlashback".Translate(), true);
         }
 
         if (index < 3)

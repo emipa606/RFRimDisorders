@@ -27,14 +27,11 @@ public class Hediff_Depression : MentalIllness
             return;
         }
 
-        if (index >= 2)
+        if (index >= 2 && Rand.Value < 5E-05f * index)
         {
-            if (Rand.Value < 5E-05f * index)
-            {
-                pawn.mindState.mentalStateHandler.TryStartMentalState(DiseaseDefOfRimDisorders
-                    .Binging_Food);
-                pawn.health.AddHediff(DiseaseDefOfRimDisorders.Refractory);
-            }
+            pawn.mindState.mentalStateHandler.TryStartMentalState(DiseaseDefOfRimDisorders
+                .Binging_Food);
+            pawn.health.AddHediff(DiseaseDefOfRimDisorders.Refractory);
         }
 
         if (index < 3)

@@ -74,20 +74,11 @@ public static class MentalIllnessGiver
             }
         }
 
-        //bool flag4 = false;
         var isSick = false;
         var lowMood = false;
-        if (pawn.health != null)
+        if (pawn.health is { hediffSet.AnyHediffMakesSickThought: true })
         {
-            if (pawn.health.InPainShock)
-            {
-                //flag4 = true;
-            }
-
-            if (pawn.health.hediffSet is { AnyHediffMakesSickThought: true })
-            {
-                isSick = true;
-            }
+            isSick = true;
         }
 
         var lowStress = false;
@@ -158,6 +149,7 @@ public static class MentalIllnessGiver
             }
 
             if (Rand.Value < rateAnx &&
+                pawn.health != null &&
                 !pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.GeneralizedAnxiety))
             {
                 nullable = null;
@@ -165,11 +157,16 @@ public static class MentalIllnessGiver
                 var str = $"{pawn.Name.ToStringShort} {"RRD.DevelopedGAD".Translate()}";
                 if (!upper)
                 {
-                    str = !(pawn.needs.mood.thoughts.TotalMoodOffset() <
-                            pawn.mindState.mentalBreaker.BreakThresholdMajor)
-                        ? $"{str}."
-                        : string.Concat(str,
+                    if (!(pawn.needs.mood.thoughts.TotalMoodOffset() <
+                          pawn.mindState.mentalBreaker.BreakThresholdMajor))
+                    {
+                        str = $"{str}.";
+                    }
+                    else
+                    {
+                        str = string.Concat(str,
                             pawn.gender != Gender.Male ? "RRD.StressF".Translate() : "RRD.StressM".Translate());
+                    }
                 }
                 else
                 {
@@ -213,7 +210,8 @@ public static class MentalIllnessGiver
                 }
             }
 
-            if (Rand.Value < rateDep && !pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.MajorDepression))
+            if (Rand.Value < rateDep && pawn.health != null &&
+                !pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.MajorDepression))
             {
                 nullable = null;
                 pawn.health.AddHediff(DiseaseDefOfRimDisorders.MajorDepression, null, nullable);
@@ -288,7 +286,8 @@ public static class MentalIllnessGiver
                 }
             }
 
-            if (Rand.Value < ocd && !pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.COCD))
+            if (Rand.Value < ocd && pawn.health != null &&
+                !pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.COCD))
             {
                 nullable = null;
                 pawn.health.AddHediff(DiseaseDefOfRimDisorders.COCD, null, nullable);
@@ -300,11 +299,16 @@ public static class MentalIllnessGiver
                 }
                 else if (!isSick)
                 {
-                    str2 = !(pawn.needs.mood.thoughts.TotalMoodOffset() <
-                             pawn.mindState.mentalBreaker.BreakThresholdMajor)
-                        ? $"{str2}."
-                        : string.Concat(str2,
+                    if (!(pawn.needs.mood.thoughts.TotalMoodOffset() <
+                          pawn.mindState.mentalBreaker.BreakThresholdMajor))
+                    {
+                        str2 = $"{str2}.";
+                    }
+                    else
+                    {
+                        str2 = string.Concat(str2,
                             pawn.gender != Gender.Male ? "RRD.StressF".Translate() : "RRD.StressM".Translate());
+                    }
                 }
                 else
                 {
@@ -339,13 +343,14 @@ public static class MentalIllnessGiver
             }
         }
 
-        if (!(Rand.Value < ratePts) || pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.PTSD))
+        if (pawn.health != null &&
+            (!(Rand.Value < ratePts) || pawn.health.hediffSet.HasHediff(DiseaseDefOfRimDisorders.PTSD)))
         {
             return;
         }
 
         nullable = null;
-        pawn.health.AddHediff(DiseaseDefOfRimDisorders.PTSD, null, nullable);
+        pawn.health?.AddHediff(DiseaseDefOfRimDisorders.PTSD, null, nullable);
         var str3 = string.Format(string.Concat("{0}", "RRD.DevelopedPTSD".Translate()),
             pawn.Name.ToStringShort);
         if (!criticalStress)

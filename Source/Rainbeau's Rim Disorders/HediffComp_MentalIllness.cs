@@ -11,14 +11,14 @@ public sealed class HediffComp_MentalIllness : HediffComp
 
     public HediffCompProperties_MentalIllness Props => (HediffCompProperties_MentalIllness)props;
 
-    public override void CompPostTick(ref float severityadjustment)
+    public override void CompPostTick(ref float severityAdjustment)
     {
         if (episodeChancePerDay == 0f)
         {
             return;
         }
 
-        base.CompPostTick(ref severityadjustment);
+        base.CompPostTick(ref severityAdjustment);
         if (Rand.Value < episodeChancePerDay / 60000f)
         {
             tryTriggerEpisode();
@@ -34,12 +34,9 @@ public sealed class HediffComp_MentalIllness : HediffComp
         {
             endEpisode();
         }
-        else if (episodeTicks > Props.minEpisodeDuration * 60000f)
+        else if (episodeTicks > Props.minEpisodeDuration * 60000f && Rand.Value < 0.00015f)
         {
-            if (Rand.Value < 0.00015f)
-            {
-                endEpisode();
-            }
+            endEpisode();
         }
     }
 

@@ -18,7 +18,15 @@ public class Alert_SudicideRisk : Alert_Critical
     public override AlertReport GetReport()
     {
         var suidiceRisk = getSuicideRisk();
-        var alertReport = suidiceRisk != null ? AlertReport.CulpritIs(suidiceRisk) : false;
+        AlertReport alertReport;
+        if (suidiceRisk != null)
+        {
+            alertReport = AlertReport.CulpritIs(suidiceRisk);
+        }
+        else
+        {
+            alertReport = false;
+        }
 
         return alertReport;
     }
